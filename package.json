@@ -1,0 +1,31 @@
+{
+  "name": "altano",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Operating-Expense/altano.git"
+  },
+  "author": "OPEX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Operating-Expense/altano/issues"
+  },
+  "homepage": "https://github.com/Operating-Expense/altano#readme",
+  "dependencies": {
+    "autoprefixer": "^9.4.2",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.7",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": [
+    "last 3 version",
+    "ios >= 8"
+  ]
+}
