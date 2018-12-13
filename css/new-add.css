@@ -1,0 +1,36 @@
+.on-load.header__naming h2,
+.on-load.header__naming p {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.header__naming {
+    overflow: hidden;
+}
+
+.header__naming h2,
+.header__naming p {
+    -webkit-transform: translateX(-130%);
+    -ms-transform: translateX(-130%);
+    transform: translateX(-130%);
+    -webkit-transition: -webkit-transform .8s cubic-bezier(.215, .61, .355, 1);
+    transition: -webkit-transform .8s cubic-bezier(.215, .61, .355, 1);
+    transition: transform .8s cubic-bezier(.215, .61, .355, 1);
+    transition: transform .8s cubic-bezier(.215, .61, .355, 1), -webkit-transform .8s cubic-bezier(.215, .61, .355, 1);
+}
+
+.header__naming h2:nth-child(1) {
+    -webkit-transition-delay: 1.18s;
+    transition-delay: 1.18s;
+}
+
+.header__naming h2:nth-child(2) {
+    -webkit-transition-delay: 1.26s;
+    transition-delay: 1.26s;
+}
+
+.header__naming p {
+    -webkit-transition-delay: 1.34s;
+    transition-delay: 1.34s;
+}
