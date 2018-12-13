@@ -1,0 +1,341 @@
+@import 'header.scss'; 
+@import 'fonts.scss';
+@import 'footer.scss';
+body{
+	margin: 0px;
+	background-color: #282828;
+}
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+.header{
+	background-color:#f8f7f7;
+	.header__button{
+	background-color:#000;
+	color: #fff;
+
+}
+.header__contacts{
+	color: #000;
+	}
+}
+.buy{
+	background-color:#f8f7f7;
+	padding-bottom: 100px;
+	.arrow_back_with_line{
+		margin: 25px 100px;
+		span{
+			font-family:monsemibold;
+			font-size:12px;
+			text-transform: uppercase;
+			padding-left: 15px;
+			color: #000;
+		}
+	}
+	.buy__naming{
+		color:#0a0a0a;
+		font-family: monlight;
+		font-size: 52px;
+		margin: 30px 100px;
+	}
+	.buy__wtch{
+		display: inline-block;
+		margin: 30px 100px;
+		font-family: monlight;
+		font-size: 18px;
+	}
+	.buy__wtch2{
+		margin-left: 575px;
+	}
+	.buy__products{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 30px 0 100px;
+		justify-content: space-between;
+		
+		.products__wib{
+			width:810px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			border-bottom: 1px solid black;
+			.wib__form1{
+				width: 360px;
+				input{
+					width: 100%;
+					margin-bottom: 50px;
+					background-color:#f8f7f7;
+					border: none;
+					border-bottom: 1px solid black;
+					padding-bottom: 10px;
+					font-family: monlight;
+					font-size: 12px;
+				}
+				span{
+					font-family: monlight;
+					font-size: 12px;
+					display: block;
+					margin-top: -40px;
+				}
+				p{
+					font-family: monlight;
+					font-size: 16px;
+				}
+				img{
+					margin-right: 40px;
+				}
+			}
+			.wib__form2{
+				width: 360px;
+				input{
+					width: 100%;
+					margin-bottom: 50px;
+					background-color:#f8f7f7;
+					border: none;
+					border-bottom: 1px solid black;
+					padding-bottom: 10px;
+					font-family: monlight;
+					font-size: 12px;
+				}
+				
+				p{
+					font-family: monlight;
+					font-size: 16px;
+					margin-top: -26px;
+				}
+				.form2__smallfl{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+				.form2__small{
+					width: 20%;
+				}
+				.wib__total{
+					font-family: monlight;
+					font-size: 16px;
+					text-align: right;
+					span{
+						margin-left: 40px;
+					}
+				}
+			}
+			}
+		.products__form{
+			width: 295px;
+			margin-top: -10px;
+			form{
+				background-color: #fff;
+				p{
+					padding-top: 35px;
+					padding-left: 30px;
+					font-family: monlight;
+					font-size: 16px;
+				}
+				input{
+					margin-left: 30px;
+					margin-right: 12px;
+					display: inline-block;
+					padding-bottom: 18px;
+					color: white;
+				}
+				span{
+					width: 210px;
+					display: inline-block;
+					font-family: monreg;
+					font-size: 12px;
+					line-height: 18px;
+					padding-bottom: 20px;
+				}
+				.form__p{
+					padding-top: 0;
+				}
+				.form__email{
+					margin: 0;
+					padding: 0;
+					width: 80%;
+					margin-left:30px;
+					border: none;
+					border-bottom: 1px solid black;
+					font-family: monreg;
+					font-size: 12px;
+					margin-bottom: 20px;
+				}
+				a{
+					background-color: #000;
+					color: #fff;
+					font-family: monsemibold;
+					font-size: 16px;
+					padding: 19px 30px;
+					margin: 0 35px;
+					margin-bottom: 15px;
+					text-transform: uppercase;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+//section media
+
+@media (min-width: 767px) and (max-width: 1278px) { 
+.container {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+.buy .arrow_back_with_line {
+    margin: 25px 30px;
+}
+.buy .buy__naming {
+    margin: 30px 30px;
+}
+.buy .buy__products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30px 0 30px;
+    justify-content: space-between;
+}
+.buy .buy__wtch {
+    display: inline-block;
+    margin: 30px 30px;
+    font-family: monlight;
+    font-size: 18px;
+}
+.buy .buy__products .products__wib .wib__form2 {
+    width: 325px;
+}
+.buy .buy__products .products__wib .wib__form1 {
+    width: 325px;
+}
+.buy .buy__products .products__form {
+    width: 708px;
+    margin-top: -10px;
+}
+.form__768__box2, .form__768__box{
+	display: inline-block;
+}
+.form__768__flex{
+	display: flex;
+}
+.buy .buy__products .products__form form .form__email {
+    width: 50%;
+}
+.buy .buy__products .products__form form a {
+	transform: translateY(-17px);
+}
+}
+
+//section media
+
+.ask{
+	background-image: url(../img/ask__bg.jpg);
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.ask__q{
+		display: inline-block;
+		width: 480px;
+		h3{
+			color: #fff;
+			font-family: monreg;
+			font-size:52px;
+			margin: 0;
+		}
+		p{
+			color: #fff;
+			font-family: monreg;
+			font-size:18px;
+			margin-top: 30px;
+		}
+	}
+	.ask__form{
+		display: inline-block;
+		width: 390px;
+		height: 350px;
+		background-color: #fff;
+		margin: 90px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		input{
+			display: block;
+			border: none;
+			width: 275px;
+			border-bottom: 1px solid black;
+			margin-top: 35px;
+		}
+		.ask__submit{
+			font-family: monbold;
+			font-size: 16px;
+			text-align: right;
+			background-color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+//section media
+
+@media (min-width: 767px) and (max-width: 1278px) { 
+
+.ask{
+	position: relative;
+	display: block;
+	height: 650px;
+	background-size: cover;
+	background-position: 21%;
+
+	.ask__q{
+		display: inline-block;
+		width: 100%;
+		h3{
+			color: #fff;
+			font-family: monreg;
+			font-size:52px;
+			margin: 80px 0 0 30px;
+		}
+		p{
+			color: #fff;
+			font-family: monreg;
+			font-size:18px;
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+	}
+	.ask__form{
+		display: inline-block;
+		width: 415px;
+		height: 350px;
+		background-color: #fff;
+		margin: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		input{
+			display: block;
+			border: none;
+			width: 275px;
+			border-bottom: 1px solid black;
+			margin-top: 35px;
+		}
+		.ask__submit{
+			font-family: monbold;
+			font-size: 16px;
+			text-align: right;
+			background-color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+}
+
+//section ask media

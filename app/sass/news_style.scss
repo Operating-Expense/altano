@@ -1,0 +1,128 @@
+@import 'header.scss'; 
+@import 'fonts.scss';
+@import 'footer.scss';
+body{
+	margin: 0px;
+	background-color: #282828;
+}
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+.header{
+	background-color:#f8f7f7;
+	.header__button{
+	background-color:#000;
+	color: #fff;
+
+}
+.header__contacts{
+	color: #000;
+}
+}
+.news{
+	background-color:#f8f7f7;
+	h3{
+	font-family: monreg;
+	font-size: 52px;
+	padding: 60px 0 60px 100px;
+	margin: 0;
+	}
+	.news__flex{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 100px;
+		.news__element{
+			width: 340px;
+			p{
+				font-family: monlight;
+				font-size: 18px;
+				color: #686767;
+				margin: 30px 0;
+				line-height: 26px;
+			}
+			span{
+				font-family: monlight;
+				font-size: 12px;
+				color: #686767;
+				display: block;
+				margin-bottom: 40px;
+			}
+		}
+	}
+	.rectangles{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 100px;
+		img{
+			margin: 0 22px;
+		}
+	}
+}
+
+//section media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+.container {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+}
+
+//section media
+
+//section news media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+
+.news{
+	background-color:#f8f7f7;
+	h3{
+	font-family: monreg;
+	font-size: 52px;
+	padding: 60px 0 60px 30px;
+	margin: 0;
+	}
+	.news__flex{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 30px;
+		.news__element{
+			width: 340px;
+			p{
+				font-family: monlight;
+				font-size: 18px;
+				color: #686767;
+				margin: 30px 0;
+				line-height: 26px;
+			}
+			span{
+				font-family: monlight;
+				font-size: 12px;
+				color: #686767;
+				display: block;
+				margin-bottom: 40px;
+			}
+		}
+	}
+	.rectangles{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 100px;
+		img{
+			margin: 0 22px;
+		}
+	}
+}
+
+}

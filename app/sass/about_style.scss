@@ -1,0 +1,330 @@
+@import 'header.scss'; 
+@import 'fonts.scss';
+@import 'footer.scss';
+.wellc{
+	background-image: url(../img/about_back.jpg);
+	height: 720px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	div{
+		width: 545px;
+		padding: 250px 0 0 100px;
+		color: #fff;
+		h3{
+			font-family: monlight;
+			font-size:52px;
+			color: #fff;
+			margin: 0;
+			margin-bottom: 35px;
+		}
+		p{
+			font-family:monreg;
+			font-size:18px;
+			margin: 0;
+			line-height: 30px;
+		}
+	}
+}
+
+//section wellc media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+	
+	.wellc{
+	height: 1020px;
+	background-position: 30%;
+	
+	div{
+		width: 545px;
+		padding: 330px 0 0 30px;
+		color: #fff;
+		h3{
+			font-family: monlight;
+			font-size:52px;
+			color: #fff;
+			margin: 0;
+			margin-bottom: 35px;
+		}
+		p{
+			font-family:monreg;
+			font-size:18px;
+			margin: 0;
+			line-height: 30px;
+		}
+	}
+}
+}
+
+//section wellc media
+.prof{
+	background-color: #f8f7f7;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+	.wellc__white__rect{
+		background-color: #fff;
+		position: absolute;
+		top: 185px;
+		right: 30px;
+		bottom: 180px;
+		left: 30px;
+	}
+	.wellc_box1{
+		position: relative;
+		z-index: 2;
+		width: 50%;
+		min-width: 630px;
+		height: 500px;
+	}
+	.wellc_box2{
+		position: relative;
+		z-index: 2;
+		width: 50%;
+		min-width: 630px;
+		height: 500px;
+		h3{
+			margin: 0 0 35px 75px;
+			font-family: monlight;
+			font-size: 52px;
+		}
+		p{
+			font-family: monreg;
+			font-size: 16px;
+			line-height: 30px;
+			margin: 0 150px 0 75px;
+		}
+	}
+	.wellc_box3{
+		position: relative;
+		z-index: 2;
+		width: 50%;
+		min-width: 630px;
+		height: 500px;
+		h3{
+			margin: 80px 120px 30px 100px;
+			font-family: monlight;
+			font-size: 52px;
+		}
+		p{
+			font-family: monreg;
+			font-size: 16px;
+			line-height: 30px;
+			margin: 0 155px 0 100px;
+		}
+	}
+	.wellc_box4{
+		position: relative;
+		z-index: 2;
+		width: 50%;
+		min-width: 630px;
+		height: 500px;
+	}
+}
+
+//section prof media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+	.prof{
+	background-color: #f8f7f7;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 80px;
+	padding-bottom: 100px;
+	
+	margin-bottom: -3px;
+	.wellc__white__rect{
+		background-color: #fff;
+		position: absolute;
+		top: 185px;
+		right: 0px;
+		bottom: 180px;
+		left: 0px;
+	}
+	.wellc_box1{
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-width: 630px;
+		height: 500px;
+		margin: 0 30px 40px 30px;
+		order: 1;
+	}
+	.wellc_box2{
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		height: 360px;
+		order: 2;
+		h3{
+			margin: 0 180px 30px 30px;
+			font-family: monlight;
+			font-size: 52px;
+		}
+		p{
+			font-family: monreg;
+			font-size: 16px;
+			line-height: 30px;
+			margin: 0 30px 0 30px;
+		}
+	}
+	.wellc_box3{
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-width: 630px;
+		height: 300px;
+		order: 4;
+		h3{
+			margin: 40px 30px 30px 30px;
+			font-family: monlight;
+			font-size: 52px;
+		}
+		p{
+			font-family: monreg;
+			font-size: 16px;
+			line-height: 30px;
+			margin: 0 30px 0 30px;
+		}
+	}
+	.wellc_box4{
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-width: 630px;
+		height: 500px;
+		margin: 0 30px;
+		order: 3;
+	}
+}
+}
+
+//section prof media
+
+
+.about{
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+.team{
+	background-color: #f8f7f7;
+	.partners{
+		margin-top: 0;
+		position: relative;
+		z-index: 2;
+		h3{
+			position: relative;
+			z-index: 2;
+		}
+		.partners__white{
+			background-color: #fff;
+			position: absolute;
+			top: -70px;
+			left: 0;
+			bottom: -220px;
+			right: 300px;
+			z-index: 0;
+		}
+	}
+	.partners__circle{
+		position: relative;
+		z-index: 2;
+		padding-bottom: 150px;
+	}
+	h4{
+		font-family: monlight;
+		font-size: 52px;
+		margin: 0;
+		padding-left: 100px;
+	}
+	.team__flex{
+		margin: 0 30px 0 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 60px;
+		padding-bottom: 160px;
+		h5{
+			font-family: monlight;
+			font-size: 18px;
+			margin: 40px 0 25px 0;
+		}
+		p{
+			font-family: monlight;
+			font-size: 14px;
+		}
+	}
+}
+
+//section prof media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+	.team{
+	background-color: #f8f7f7;
+	
+	.partners{
+		margin-top: 0;
+		position: relative;
+		z-index: 2;
+		h3{
+			position: relative;
+			z-index: 2;
+
+		}
+		.partners__white{
+			background-color: #fff;
+			position: absolute;
+			top: -70px;
+			left: 0;
+			bottom: -220px;
+			right: 300px;
+			z-index: 0;
+		}
+	}
+	.partners__circle{
+		position: relative;
+		z-index: 2;
+		padding-bottom: 150px;
+	}
+	h4{
+		font-family: monlight;
+		font-size: 52px;
+		margin: 0;
+		padding-left: 30px;
+		margin-top: -5px;
+	}
+	.team__flex{
+		margin: 0 30px 0 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 60px;
+		padding-bottom: 160px;
+		h5{
+			font-family: monlight;
+			font-size: 18px;
+			margin: 40px 0 25px 0;
+		}
+		p{
+			font-family: monlight;
+			font-size: 14px;
+		}
+	}
+}
+.team__flex__none{
+	display: none;
+}
+.team__flex__img{
+	width: 205px;
+	height: 270px;
+}
+.circle__flex__none{
+	display: none;
+}
+
+
+}
+//section prof media

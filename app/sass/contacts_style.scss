@@ -1,0 +1,272 @@
+@import 'header.scss'; 
+@import 'fonts.scss';
+@import 'footer.scss';
+body{
+	margin: 0px;
+	background-color: #282828;
+}
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+.contacts{
+	background-color: #f8f7f7;
+	h3{
+		margin:0;
+		padding: 50px 100px;
+		font-family: monreg;
+		font-size: 52px;
+	}
+	.contacts__flex{
+		padding: 0 100px 100px 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		.contacts__city{
+			position: relative;
+			height: 470px;
+			h4{
+				font-family: monlight;
+				font-size: 30px;
+				line-height: 40px;
+			}
+			p{
+				font-family: monlight;
+				font-size: 16px;
+				line-height: 30px;
+			}
+			a{
+				text-decoration: none;
+				color: #fff;
+				background-color: #000;
+				font-family: monbold;
+				padding: 15px 45px;
+				text-transform: uppercase;
+				position: absolute;
+				bottom: 10px;
+			}
+		}
+	}
+}
+
+//section media
+
+@media (min-width: 767px) and (max-width: 1278px) {
+.container {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+.contacts{
+	background-color: #f8f7f7;
+	h3{
+		margin:0;
+		padding: 50px 30px;
+		font-family: monreg;
+		font-size: 52px;
+	}
+	.contacts__flex{
+		padding: 0 30px 100px 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		flex-direction: column;
+		.contacts__city{
+			position: relative;
+			height: 380px;
+			display: grid;
+			grid-template-columns: 310px 310px;
+			grid-template-rows: 100px 250px;
+			.kiev__1{
+				grid-area: 1/1/2/2;
+			}
+			.kiev__2{
+				grid-area: 2/1/3/2;
+			}
+			.kiev__3{
+				grid-area: 2/2/3/3;    
+			}
+			.kiev__4{
+				 grid-area: 2/1/3/2;
+			}
+			.dnepr__1{
+				grid-area: 1/1/2/2;
+			}
+			.dnepr__2{
+				grid-area: 2/1/3/2;
+			}
+			.dnepr__3{
+				grid-area: 2/2/3/3;    
+			}
+			.dnepr__4{
+				 grid-area: 2/1/3/2;
+			}
+			.odessa__1{
+				grid-area: 1/1/2/2;
+			}
+			.odessa__2{
+				grid-area: 2/1/3/2;
+			}
+			.odessa__3{
+				grid-area: 2/2/3/3;    
+			}
+			.odessa__4{
+				 grid-area: 2/1/3/2;
+			}
+			h4{
+				font-family: monlight;
+				font-size: 30px;
+				line-height: 40px;
+			}
+			p{
+				font-family: monlight;
+				font-size: 16px;
+				line-height: 30px;
+			}
+			a{
+				text-decoration: none;
+				color: #fff;
+				background-color: #000;
+				font-family: monbold;
+				padding: 15px 45px;
+				text-transform: uppercase;
+				position: absolute;
+				bottom: 10px;
+			}
+			.work__time{
+				margin-top: -10px;
+			}
+		}
+	}
+}
+
+}
+
+//section media
+
+.ask{
+	background-image: url(../img/pay_ask_us.jpg);
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.ask__q{
+		display: inline-block;
+		width: 400px;
+		h3{
+			color: #fff;
+			font-family: monreg;
+			font-size:52px;
+			margin: 0;
+		}
+		p{
+			color: #fff;
+			font-family: monreg;
+			font-size:18px;
+			margin-top: 30px;
+		}
+	}
+	.ask__form{
+		display: inline-block;
+		width: 415px;
+		height: 350px;
+		background-color: #fff;
+		margin: 90px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		input{
+			display: block;
+			border: none;
+			width: 275px;
+			border-bottom: 1px solid black;
+			margin-top: 35px;
+		}
+		.ask__submit{
+			font-family: monbold;
+			font-size: 16px;
+			text-align: right;
+			background-color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+.map iframe{
+	width:1280px;
+}
+
+@media (min-width: 767px) and (max-width: 1278px) { 
+.map iframe{
+	width:768px;
+}
+.ask{
+	background-image: url(../img/pay_ask_us.jpg);
+	position: relative;
+	display: block;
+	height: 650px;
+	background-size: cover;
+
+	.ask__q{
+		display: inline-block;
+		width: 100%;
+		h3{
+			color: #fff;
+			font-family: monreg;
+			font-size:52px;
+			margin: 80px 0 0 30px;
+		}
+		p{
+			color: #fff;
+			font-family: monreg;
+			font-size:18px;
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+	}
+	.ask__form{
+		display: inline-block;
+		width: 415px;
+		height: 350px;
+		background-color: #fff;
+		margin: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		input{
+			display: block;
+			border: none;
+			width: 275px;
+			border-bottom: 1px solid black;
+			margin-top: 35px;
+		}
+		.ask__submit{
+			font-family: monbold;
+			font-size: 16px;
+			text-align: right;
+			background-color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	}
+}
+}
+
+//section ask media
+
+.header{
+	background-color:#f8f7f7;
+	.header__button{
+	background-color:#000;
+	color: #fff;
+
+}
+.header__contacts{
+	color: #000;
+}
+}
+
