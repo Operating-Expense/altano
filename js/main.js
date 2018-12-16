@@ -51,14 +51,15 @@ const text = document.querySelector(".header__naming");
 
 //---slider template init---
 
-setTimeout(() => {
-    text.classList.add("on-load");
-}, 1);
 
-count.innerHTML = `0${currentSlideNum}<span>/0${sliderMax}</span>`;
-nextPreview.setAttribute("src", `./img/${sliders.slide2.preview}`);
 
 if (sliderCtr) {
+    count.innerHTML = `0${currentSlideNum}<span>/0${sliderMax}</span>`;
+    nextPreview.setAttribute("src", `./img/${sliders.slide2.preview}`);
+    setTimeout(() => {
+        text.classList.add("on-load");
+    }, 1);
+
     setInterval(doNext, 10000);
 
     sliderCtr.addEventListener("click", e => {
@@ -170,6 +171,33 @@ if (partnersCtrl) {
         if (e.target == ctrlLeft) {
             slideLeft();
             clearInterval(partnersInterval);
+        }
+    })
+}
+
+
+//---collections tip popup --- NOT WORK PROPERTLY need to fix or rebuld logic
+const pointerKey = document.querySelectorAll('.pointer__key');
+const pointerClose = document.querySelectorAll('.pointer-tip__close');
+
+for (i = 0; i < pointerClose.length; i++) {
+    pointerClose[i].addEventListener('click', (e) => {
+        if (e.target == pointerClose[i]) {
+            pointerClose[i].parentNode.classList.remove('tip-show');
+        }
+    })
+}
+
+for (i = 0; i < pointerKey.length; i++) {
+    pointerKey[i].addEventListener('click', (e) => {
+        for (i = 0; i < e.currentTarget.children.length; i++) {
+            if (e.currentTarget.children[i].classList.contains('pointer-tip')) {
+                if (e.currentTarget.children[i].classList.contains('tip-show')) {
+                    e.currentTarget.children[i].classList.remove('tip-show');
+                } else {
+                    e.currentTarget.children[i].classList.add('tip-show');
+                }
+            }
         }
     })
 }
