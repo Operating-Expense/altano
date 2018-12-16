@@ -160,14 +160,16 @@ if (partnersCtrl) {
         }
     }
 
-    setInterval(slideRight, 2000);
+    const partnersInterval = setInterval(slideRight, 2000);
 
     partnersCtrl.addEventListener('click', (e) => {
         if (e.target == ctrlRight) {
             slideRight();
+            clearInterval(partnersInterval);
         }
         if (e.target == ctrlLeft) {
             slideLeft();
+            clearInterval(partnersInterval);
         }
     })
 }
