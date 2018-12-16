@@ -154,3 +154,43 @@
     transition: background .5s cubic-bezier(0.4, 0, 1, 1);
     background-size: 100%;
 }
+
+.partners__circle {
+    position: relative;
+    width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: block;
+}
+
+.partners__control {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 100%;
+    z-index: 2;
+}
+
+.partners-ctrl-left,
+.partners-ctrl-right {
+    cursor: pointer;
+}
+
+.partners-ctrl-right {
+    float: right;
+}
+
+.partners__circle .circle__flex {
+    grid-column-start: 2;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .87s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.circle__flex a {
+    text-align: center;
+    width: 170px;
+    margin: 0 15px;
+    z-index: 3;
+}
