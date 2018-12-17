@@ -16,7 +16,7 @@
 			<a href="#" class="header__contacts header__element1">Киев</a>
 			<a href="tel:+380675605970" class="header__contacts header__element2">+38 (067) 560 59 70
 			</a>
-			<a href="#" class="header__element3"><img src="img/search_white.png" alt="" width="19" height="19" /></a>
+			<a href="#" class="header__element3"><img class="search-btn" src="img/search_white.png" alt="" width="19" height="19" /></a>
 			<a href="#" class="header__element4"><img src="img/bag_white.png" alt="" width="19" height="19" /></a>
 			<a href="#" class="header__element5"><img class="header-menu-btn" src="img/menu_white.png" alt="" width="19" height="19" /></a>
 			<a href="#" class="header__button header__element6">ПОСЕТИТЬ ШОУРУМ</a>
@@ -298,8 +298,8 @@
 		</div>
 		<div class="footer__right">
 			<p>Подпишитесь на наши новости</p>
-			<form action="">
-				<input type="email" value="E-mail" class="footer__input" />
+			<form action="" class="form-subscribe">
+				<input type="email" placeholder="E-mail" class="footer__input" />
 				<input type="submit" value="Отправить" class="footer__submit" />
 			</form>
 		</div>
@@ -311,6 +311,19 @@
 			<a href="#"><span>by</span><img src="img/opex_logo_badq.png" alt="" class="footer__opex" /></a>
 		</div>
 	</footer>
+	<div class="dropdown-search">
+		<div class="dropdown-search__close">&times;</div>
+		<div class="dropdown-search__input">
+			<input type="text" placeholder="Search"><button></button>
+		</div>
+		<div class="dropdown-search__results">
+			<div class="dropdown-search__result">Обеденные комплекты</div>
+			<div class="dropdown-search__result">Обеденные столы</div>
+			<div class="dropdown-search__result">Обеденные крусла</div>
+			<div class="dropdown-search__result">Обеденные стулья</div>
+			<div class="dropdown-search__result">Обеденные диваны</div>
+		</div>
+	</div>
 	<div class="dropdown-menu">
 		<div class="dropdown-menu__close">&times;</div>
 		<div class="dropdown-menu__header">
