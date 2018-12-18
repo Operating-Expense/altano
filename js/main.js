@@ -11,6 +11,18 @@ document.addEventListener("click", e => {
     }
 });
 
+const searchBtn = document.querySelector('.search-btn');
+const searchDropdown = document.querySelector(".dropdown-search");
+const searchDropdownClose = document.querySelector(".dropdown-search__close");
+
+document.addEventListener("click", e => {
+    if (e.target == searchBtn) {
+        searchDropdown.classList.add("show-header-dropdown");
+    }
+    if (e.target == searchDropdownClose) {
+        searchDropdown.classList.remove("show-header-dropdown");
+    }
+});
 //-----slider------
 const sliders = {
     slide1: {
