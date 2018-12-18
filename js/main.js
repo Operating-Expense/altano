@@ -213,3 +213,30 @@ for (i = 0; i < pointerKey.length; i++) {
         }
     })
 }
+
+const subscriptionForm = document.querySelector('.form-subscribe');
+
+subscriptionForm.addEventListener('submit', e => {
+    e.preventDefault();
+    // console.log(e.target.children);
+    for (i = 0; i < e.target.children.length; i++) {
+        if (e.target.children[i].attributes.type.value == 'email') {
+            var isValidEmail = validateEmail(e.target.children[i].value);
+        }
+    }
+
+    isValidEmail ? thankYou() : console.log('not-valid')
+
+})
+
+function thankYou() {
+    const thankYouBlock = document.createElement('div');
+    thankYouBlock.classList.add('thx');
+    thankYouBlock.innerHTML = "Thank you for subscribe!";
+    subscriptionForm.parentNode.replaceChild(thankYouBlock, subscriptionForm);
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
