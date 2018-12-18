@@ -354,3 +354,128 @@
 .footer__submit {
     cursor: pointer;
 }
+
+.header__element4 {
+    position: relative;
+}
+
+.cart-dropdown {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 3px 40px 0 rgba(0, 0, 0, 0.1);
+    font-family: monlight;
+    top: 37px;
+    left: -200px;
+    z-index: 9;
+}
+
+.cart-items {
+    margin: 30px 0;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.cart-control__quanity>* {
+    border: 1px solid #000;
+}
+
+.cart-control__quanity {
+    width: 80px;
+    height: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20px 40px 20px;
+    text-align: center;
+}
+
+
+.control__quanity {
+    width: 40px;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+
+.cart-items-count {
+    background: #fe3000;
+    font-size: 10px;
+    color: #0a0a0a;
+    font-family: monlight;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 600;
+    border: 1px solid #000;
+}
+
+.control__plus,
+.control__minus {
+    cursor: pointer;
+}
+
+.cart-control {
+    display: grid;
+    width: 200px;
+    grid-auto-flow: column;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 15px;
+    margin: 10px 15px;
+    grid-template-rows: auto auto;
+}
+
+.cart-img img {
+    width: 65px;
+}
+
+.cart-total {
+    padding: 0 30px;
+    margin: 30px 0;
+}
+
+.cart-checkout {
+    background-color: #0a0a0a;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding: 15px 35px;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.cart-control__title {
+    grid-column: 1/3;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.cart-control__price {
+    font-size: 14px;
+}
+
+.cart-control__remove:hover {
+    color: #000;
+}
+
+.cart-control__remove {
+    font-size: 36px;
+    color: #666;
+    cursor: pointer;
+}
+
+.cart-total__price {
+    float: right;
+}
