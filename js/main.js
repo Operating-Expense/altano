@@ -215,19 +215,17 @@ for (i = 0; i < pointerKey.length; i++) {
 }
 
 const subscriptionForm = document.querySelector('.form-subscribe');
-
-subscriptionForm.addEventListener('submit', e => {
-    e.preventDefault();
-    // console.log(e.target.children);
-    for (i = 0; i < e.target.children.length; i++) {
-        if (e.target.children[i].attributes.type.value == 'email') {
-            var isValidEmail = validateEmail(e.target.children[i].value);
+if (subscriptionForm) {
+    subscriptionForm.addEventListener('submit', e => {
+        e.preventDefault();
+        for (i = 0; i < e.target.children.length; i++) {
+            if (e.target.children[i].attributes.type.value == 'email') {
+                var isValidEmail = validateEmail(e.target.children[i].value);
+            }
         }
-    }
-
-    isValidEmail ? thankYou() : console.log('not-valid')
-
-})
+        isValidEmail ? thankYou() : console.log('not-valid')
+    })
+}
 
 function thankYou() {
     const thankYouBlock = document.createElement('div');
@@ -239,4 +237,52 @@ function thankYou() {
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+
+// ADD to cart
+document.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (e.target.parentNode.classList.contains('catalog__group__box'))
+        if (e.target.innerHTML == 'в корзину') {
+            const img = e.target.parentNode.children[0].src;
+            const title = e.target.parentNode.children[1].innerHTML;
+            const price = e.target.parentNode.children[3].innerHTML;
+            const priceNum = parseInt(price.replace(/\s/g, ''));
+            addToCart(priceNum, title, img);
+            moveAnimation(e.target.parentNode);
+        }
+});
+
+function moveAnimation(elem) {
+    const newR = document.createElement('div');
+    newR.classList.add('move-to-cart');
+    newR.innerHTML = elem.outerHTML;
+    elem.appendChild(newR);
+    setTimeout(() => {
+        document.querySelector('.move-to-cart').remove();
+    }, 1000);
+}
+
+function addToCart(price, title, img) {
+    const items = document.querySelector('.cart-items');
+    const cartBlock = `
+    <div class="cart-img">
+        <img src="${img}" alt="">
+    </div>
+    <div class="cart-control">
+        <div class="cart-control__title">${title}</div>
+        <div class="cart-control__quanity">
+            <span class="control__minus">-</span>
+            <input class="control__quanity" type="text" pattern="[0-9]{2}" value="1">
+            <span class="control__plus">+</span>
+        </div>
+        <div class="cart-control__price"><span>${price}</span> грн.</div>
+    </div>
+    <div class="cart-control__remove">&times;</div>`;
+
+    var newItem = document.createElement('div');
+    newItem.classList.add('cart-item');
+    newItem.innerHTML = cartBlock;
+    items.appendChild(newItem);
 }
