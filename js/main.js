@@ -241,18 +241,49 @@ function validateEmail(email) {
 
 
 // ADD to cart
+const cartButtonTop = document.querySelector('.header-cart');
+const cartDropDown = document.querySelector('.cart-dropdown');
+
+
 document.addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.parentNode.classList.contains('catalog__group__box'))
         if (e.target.innerHTML == 'в корзину') {
+            const id = e.target.parentNode.dataset.id;
             const img = e.target.parentNode.children[0].src;
             const title = e.target.parentNode.children[1].innerHTML;
             const price = e.target.parentNode.children[3].innerHTML;
-            const priceNum = parseInt(price.replace(/\s/g, ''));
-            addToCart(priceNum, title, img);
+            this.priceNum = parseInt(price.replace(/\s/g, ''));
+            //window.localStorage.setItem(`${id}`, `${img};${title};${priceNum}`);
+
+            addToCart(id, priceNum, title, img);
             moveAnimation(e.target.parentNode);
+            totalPrice(priceNum);
         }
+    if (e.target.classList.contains('header-cart')) {
+        if (cartDropDown.classList.contains('cart-show')) {
+            cartDropDown.classList.remove('cart-show');
+        } else {
+            if (items.children.length > 0) {
+                cartDropDown.classList.add('cart-show');
+                /*  for (i = 0; i < window.localStorage.length; i++) {
+                     console.log(window.localStorage.getItem[i]);
+                 } */
+            }
+
+        }
+    }
+    if (e.target.classList.contains('cart-control__remove')) {
+        cartRemoveItem(e.target.parentNode);
+    }
 });
+/* for (key in window.localStorage) {
+    if (typeof (window.localStorage[key]) == "string") {
+        //console.log(window.localStorage[key]);
+        console.log(window.localStorage[key].split(";")[1]);
+    }
+
+} */
 
 function moveAnimation(elem) {
     const newR = document.createElement('div');
@@ -263,9 +294,10 @@ function moveAnimation(elem) {
         document.querySelector('.move-to-cart').remove();
     }, 1000);
 }
+const items = document.querySelector('.cart-items');
 
-function addToCart(price, title, img) {
-    const items = document.querySelector('.cart-items');
+function addToCart(id, price, title, img) {
+
     const cartBlock = `
     <div class="cart-img">
         <img src="${img}" alt="">
@@ -277,7 +309,7 @@ function addToCart(price, title, img) {
             <input class="control__quanity" type="text" pattern="[0-9]{2}" value="1">
             <span class="control__plus">+</span>
         </div>
-        <div class="cart-control__price"><span>${price}</span> грн.</div>
+        <div class="cart-control__price" data-id="${id}"><span>${price}</span> грн.</div>
     </div>
     <div class="cart-control__remove">&times;</div>`;
 
@@ -285,4 +317,40 @@ function addToCart(price, title, img) {
     newItem.classList.add('cart-item');
     newItem.innerHTML = cartBlock;
     items.appendChild(newItem);
+    counterCart(1);
+}
+
+function counterCart(num) {
+
+    cartCounter.innerHTML = +cartCounter.innerHTML + num;
+
+    if (+cartCounter.innerHTML != '') {
+        cartCounter.classList.remove('hide');
+    } else {
+        cartCounter.classList.add('hide');
+    }
+}
+
+const cartCounter = document.querySelector('.cart-items-count');
+
+
+/* if (window.localStorage.length >= 1) {
+    cartCounter.classList.remove('hide');
+    cartCounter.innerHTML = window.localStorage.length;
+} */
+const totalPriceBlock = document.querySelector('.cart-total__price span');
+//console.log(totalPriceBlock.innerHTML);
+
+function totalPrice(plusPrice) {
+    const oldPrice = totalPriceBlock.innerHTML;
+    totalPriceBlock.innerHTML = +oldPrice + +plusPrice;
+}
+
+function cartRemoveItem(blockToRemove) {
+    blockToRemove.remove();
+    counterCart(-1);
+    totalPrice(-this.priceNum);
+    if (cartCounter.innerHTML == '0') {
+        cartDropDown.classList.remove('cart-show');
+    }
 }
