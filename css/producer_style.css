@@ -617,7 +617,10 @@ body {
     .main .main__wp .wp__text2 {
       left: 650px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -667,3 +670,42 @@ body {
     margin-top: 30px; }
   .main .main__wp .wp__text2 {
     left: 345px; } }
+
+@media only screen and (max-width: 767px) {
+  .main h3 {
+    padding: 20px;
+    font-size: 30px; }
+  .main p {
+    margin: 0 20px;
+    padding-bottom: 40px;
+    width: auto;
+    font-size: 14px; }
+  .main .main__wp {
+    margin: 0 20px;
+    padding-bottom: 40px;
+    overflow: hidden; }
+  .main .main__wp img {
+    width: 708px; }
+  .main .main__wp .wp__text {
+    height: 250px;
+    width: 240px;
+    position: absolute;
+    top: 18px;
+    left: 20px; }
+  .main .main__wp .wp__text h4 {
+    font-family: monreg;
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px; }
+  .main .main__wp .wp__text p {
+    font-family: monlight;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    line-height: 26px; }
+  .main .main__wp .wp__text a {
+    padding: 15px 48px; } }

@@ -694,7 +694,10 @@ body {
           text-transform: uppercase;
           display: inline-block; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -835,7 +838,7 @@ body {
         left: 35px;
         bottom: 30px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .item {
     display: flex;
     flex-wrap: wrap; }
@@ -897,7 +900,7 @@ body {
       border: none;
       cursor: pointer; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .ask {
     position: relative;
     display: block;
@@ -939,3 +942,129 @@ body {
         background-color: #fff;
         border: none;
         cursor: pointer; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .buy .arrow_back_with_line {
+    margin: 25px 20px; }
+  .buy .buy__naming {
+    color: #0a0a0a;
+    font-family: monlight;
+    font-size: 30px;
+    margin: 30px 20px; }
+  .buy .buy__products {
+    margin: 0 20px; }
+  .buy .buy__products .products__wib {
+    width: 280px; }
+  .buy .buy__products .products__wib .wib__prod {
+    display: none; }
+  .buy .buy__products .products__wib .wib__item .item__price {
+    border-right: none; }
+  .buy .buy__products .products__wib .wib__item {
+    position: relative; }
+  .buy .buy__products .products__wib .wib__item .item__img {
+    margin-left: 15px;
+    width: 85px; }
+  .buy .buy__products .products__wib .wib__item {
+    position: relative;
+    height: 210px; }
+  .buy .buy__products .products__wib .wib__item .item__img {
+    margin-left: 15px;
+    width: 85px;
+    position: absolute;
+    top: 10px; }
+  .buy .buy__products .products__wib .wib__item .item__name {
+    font-family: monlight;
+    font-size: 16px;
+    position: absolute;
+    left: 15px;
+    top: 80px; }
+  .item__counter {
+    position: absolute;
+    left: 15px;
+    top: 140px; }
+  .buy .buy__products .products__wib .wib__item .item__price {
+    border-right: none;
+    position: absolute;
+    right: -15px;
+    top: 63px; }
+  .buy .buy__products .products__wib .wib__item .item__cancel {
+    /* position: relative; */
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+  .buy .buy__products .products__wib .wib__price {
+    text-align: left;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px; }
+  .buy .buy__products .products__wib .wib__price p {
+    font-family: monlight;
+    font-size: 16px; }
+  .buy .buy__products .products__wib .wib__price p span {
+    margin-left: 0;
+    float: right; }
+  .buy .buy__products .products__form {
+    width: 280px; }
+  .form__flex__2 {
+    margin-left: 0; }
+  .buy .buy__products .products__form form p {
+    padding-top: 15px; }
+  .form__flex__3 div {
+    width: 280px; }
+  .buy .buy__products .products__form form a {
+    background-color: #000;
+    color: #fff;
+    font-family: monsemibold;
+    font-size: 16px;
+    padding: 27px 30px;
+    margin: 94px -251px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 174px; }
+  .item h3 {
+    margin-left: 20px;
+    font-size: 24px; }
+  .item .item__arrows {
+    margin-left: 184px;
+    margin-bottom: 15px; }
+  .ask {
+    position: relative;
+    display: block;
+    height: auto;
+    background-size: cover;
+    padding-bottom: 20px; }
+  .ask .ask__q {
+    display: inline-block;
+    width: auto; }
+  .ask .ask__q h3 {
+    color: #fff;
+    font-family: monreg;
+    font-size: 30px;
+    margin: 40px 0 0px 20px; }
+  .ask .ask__q p {
+    color: #fff;
+    font-family: monreg;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  .ask .ask__form {
+    display: inline-block;
+    width: 280px;
+    height: 330px;
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; }
+  .ask .ask__form input {
+    display: block;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid black;
+    margin-top: 35px; } }

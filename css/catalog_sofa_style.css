@@ -848,7 +848,10 @@ h4 {
   .header .header__contacts {
     color: #000; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -898,3 +901,44 @@ h4 {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: -2px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .bread ul {
+    margin-left: 20px; }
+  .catalog__header h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 40px;
+    width: auto;
+    font-size: 30px; }
+  .catalog__header a {
+    display: none; }
+  .catalog main {
+    margin: 0 20px; }
+  .catalog .catalog__sort {
+    display: block;
+    width: 330px; }
+  .catalog .catalog__sort p {
+    margin-bottom: 10px; }
+  .catalog .catalog__sort p a {
+    margin-right: 5px; }
+  .catalog .catalog__group {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -9px; }
+  .catalog .catalog__group .catalog__group__box {
+    width: 300px;
+    height: 445px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 30px; } }

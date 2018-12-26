@@ -597,14 +597,17 @@ body {
     .news .rectangles img {
       margin: 0 22px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
     margin-left: auto;
     padding: 0; } }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .news {
     background-color: #f8f7f7; }
     .news h3 {
@@ -639,3 +642,22 @@ body {
       padding-bottom: 100px; }
       .news .rectangles img {
         margin: 0 22px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden; }
+  .news h3 {
+    font-family: monreg;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 20px; }
+  .news .news__flex {
+    margin: 0 20px; }
+  .news .news__flex .news__element {
+    width: 280px;
+    overflow: hidden; } }

@@ -667,7 +667,10 @@ body {
     padding-bottom: 90px;
     margin-bottom: 0; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -728,3 +731,80 @@ body {
     top: 180px;
     right: 58px;
     height: 30px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .head {
+    height: 566px; }
+  .head .bread ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px; }
+  .head .head__news__back {
+    display: block;
+    margin: 20px; }
+  .head .head__date {
+    margin: 40px 0 0 20px; }
+  .head h4 {
+    margin: 0;
+    padding: 26px 20px 0 20px;
+    font-family: monreg;
+    font-size: 24px;
+    color: #fff; }
+  .news .news__p1 {
+    font-family: monreg;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 30px 20px; }
+  .news .news__crsl .crsl__main {
+    display: block;
+    margin: 0 auto;
+    height: 180px;
+    width: 280px; }
+  .news .news__crsl .crsl__left {
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    height: 10px;
+    width: 15px; }
+  .news .news__crsl .crsl__right {
+    position: absolute;
+    top: 75px;
+    right: 30px;
+    height: 10px;
+    width: 15px; }
+  .news .news__p2 {
+    font-family: monreg;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 30px 20px; }
+  .news .news__p3 {
+    font-family: monreg;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 30px 20px;
+    padding-top: 0px; }
+  video {
+    width: 280px;
+    height: 180px; }
+  .news .news__back {
+    display: block;
+    margin: 50px 0 50px 20px; }
+  .news .news__also {
+    margin-left: 20px;
+    margin-bottom: 50px;
+    font-family: monlight;
+    font-size: 24px; }
+  .news .news__chair {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    width: 280px;
+    height: 180px; } }

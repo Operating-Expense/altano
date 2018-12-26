@@ -57,7 +57,10 @@
       padding-left: 15px;
       color: #000; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -268,7 +271,7 @@
           left: 20px;
           bottom: 20px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .tables .tables__big {
     margin-left: 30px;
     margin-right: 30px;
@@ -507,7 +510,7 @@
       color: #686767;
       line-height: 24px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .choose .choose__wtd li a {
     font-family: monsemibold;
     font-size: 11px;
@@ -621,7 +624,7 @@
   .header .header__contacts {
     color: #000; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .item {
     display: flex;
     flex-wrap: wrap;
@@ -656,8 +659,227 @@
   .item .catalog__group .catalog__group__box a {
     padding: 15px 45px; } }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .about {
     padding-top: 100px;
     margin-bottom: -2px;
     padding-bottom: 100px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .bread ul {
+    margin-left: 20px; }
+  .catalog__header .arrow_back_with_line {
+    margin-left: 20px;
+    margin-top: 25px;
+    display: block; }
+  .catalog__header h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+    width: auto; }
+  .catalog__header a {
+    margin-left: 235px;
+    display: none; }
+  .umbrella {
+    display: block; }
+  .umbrella .umbrella__conic .conic__big {
+    position: absolute;
+    left: 20px;
+    width: 280px;
+    top: 0px; }
+  .umbrella .umbrella__conic .conic__small {
+    position: absolute;
+    left: 32px;
+    bottom: -240px;
+    width: 110px; }
+  .umbrella .umbrella__about .umbrella__discount {
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    font-family: monreg;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    background-color: #fe3000; }
+  .umbrella .umbrella__about {
+    position: relative;
+    grid-area: 1 / 6 / 2 / 7;
+    margin-top: 260px;
+    margin-left: -38px; }
+  .umbrella .inbox {
+    display: block;
+    margin: 20px 20px 50px 20px;
+    padding: 15px 89px; }
+  .umbrella .socialbuttons {
+    grid-area: 3 / 4 / 4 / 7;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+    height: 80px; }
+  .umbrella .socialbuttons span {
+    font-family: monsemibold;
+    font-size: 12px;
+    color: #686767;
+    text-transform: uppercase;
+    margin-right: 14px; }
+  .umbrella .socialbuttons .sociabuttons__img {
+    margin-left: 29px;
+    margin-right: 0; }
+  .umbrella .socialbuttons .sociabuttons__download {
+    margin-right: 12px; }
+  .choose {
+    background-color: #f8f7f7;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 30fr 70fr 290fr 250fr 250fr 290fr 70fr 30fr;
+    grid-template-rows: 90px 280px;
+    padding-bottom: 80px; }
+  .choose .choose__wtd {
+    grid-area: 1 / 3 / 2 /7;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #686767;
+    display: flex;
+    justify-content: space-between;
+    width: 830px;
+    overflow: hidden; }
+  .choose {
+    height: 435px; }
+  .choose .choose__characteristic {
+    display: block; }
+  .choose .choose__characteristic .characteristic__param2 {
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    display: inline-block; }
+  .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color1, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color2, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color3, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color4, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color5 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-top: -10px; }
+  .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color6, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color7, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color8, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color9, .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color10 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px; }
+  .item h3 {
+    font-family: monlight;
+    font-size: 24px;
+    margin-left: 20px;
+    padding-right: 0; }
+  .item .item__arrows {
+    /* grid-column-start: 8; */
+    align-self: center;
+    margin-left: 210px;
+    margin-bottom: 15px;
+    /* justify-self: end; */ }
+  .item .catalog__group .catalog__group__box {
+    width: 280px;
+    height: 390px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 20px; }
+  .item .catalog__group .catalog__group__box a {
+    padding: 15px 71px; }
+  .about {
+    padding-top: 100px; }
+  .tables .tables__big .tables__white {
+    background-color: #f8f7f7;
+    width: 440px;
+    height: 230px;
+    position: relative; }
+  .tables .tables__big .tables__white .tables__big__img {
+    position: relative;
+    left: -10px;
+    width: 280px; }
+  .tables .tables__big .tables__white .tables__small__img {
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    width: 130px; }
+  .tables__info {
+    transform: translate(-72px, 15px); }
+  .tables .tables__big .tables__info .info__nowprice {
+    font-family: monlight;
+    font-size: 24px;
+    color: #686767;
+    color: #000;
+    margin: 40px 0 50px 70px; }
+  .tables .tables__big .tables__info .inbox {
+    padding: 15px 86px; }
+  .tables .tables__big .socialbuttons {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 0px;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 100px; }
+  .tables .tables__big .socialbuttons span {
+    font-family: monsemibold;
+    font-size: 12px;
+    color: #686767;
+    text-transform: uppercase;
+    margin-right: 15px; }
+  .tables .tables__big .socialbuttons .sociabuttons__img {
+    margin-right: 0px;
+    margin-left: 25px; }
+  .tables .tables__big .socialbuttons .sociabuttons__download {
+    margin-right: 10px;
+    /* margin-left: 0px; */ }
+  .tables .tables__small {
+    /* width: 390px; */
+    /* margin-right: 100px; */
+    margin: 0 20px;
+    width: 100%;
+    padding-top: 20px; }
+  .tables .tables__small .tables__inbox {
+    display: none; }
+  .tables .tables__small .small__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+  .tables .tables__small .small__flex .catalog__group__box {
+    width: 190px;
+    height: 380px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    margin-top: 20px; }
+  .tables .tables__small .small__flex .catalog__group__box .small__inbox {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: monsemibold;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000;
+    padding: 15px 18px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
+  .tables .tables__small .tables__include {
+    position: relative; }
+  .tables .tables__small .tables__include::before {
+    content: url(../img/arrowleft3.png);
+    position: absolute;
+    right: 75px; }
+  .tables .tables__small .tables__include::after {
+    content: url(../img/arrowright3.png);
+    position: absolute;
+    right: 40px; } }

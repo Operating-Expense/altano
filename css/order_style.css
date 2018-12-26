@@ -690,7 +690,10 @@ body {
           text-transform: uppercase;
           display: inline-block; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -768,7 +771,7 @@ body {
       border: none;
       cursor: pointer; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .ask {
     position: relative;
     display: block;
@@ -811,3 +814,86 @@ body {
         background-color: #fff;
         border: none;
         cursor: pointer; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden; }
+  .buy .arrow_back_with_line {
+    margin: 25px 20px; }
+  .buy .buy__naming {
+    color: #0a0a0a;
+    font-family: monlight;
+    font-size: 30px;
+    margin: 30px 20px; }
+  .buy .buy__products .products__wib .wib__form1 {
+    width: 280px; }
+  .buy .buy__products .products__wib .wib__form1 input {
+    width: 92%; }
+  .buy .buy__products .products__wib .wib__form2 {
+    width: 280px; }
+  .buy .buy__products .products__wib .wib__form2 input {
+    width: 92%; }
+  .buy .buy__products .products__wib .wib__form2 .form2__smallfl {
+    width: 257px; }
+  .form__768__flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 280px; }
+  .buy .buy__products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30px 0 20px;
+    justify-content: space-between; }
+  .buy .buy__products .products__form form a {
+    background-color: #000;
+    color: #fff;
+    font-family: monsemibold;
+    font-size: 16px;
+    padding: 19px 21px;
+    margin: 23px 35px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    display: inline-block; }
+  .buy .buy__products .products__form form .form__email {
+    width: 80%; }
+  .ask {
+    position: relative;
+    display: block;
+    height: auto;
+    background-size: cover;
+    padding-bottom: 20px; }
+  .ask .ask__q {
+    display: inline-block;
+    width: auto; }
+  .ask .ask__q h3 {
+    color: #fff;
+    font-family: monreg;
+    font-size: 30px;
+    margin: 40px 0 0px 20px; }
+  .ask .ask__q p {
+    color: #fff;
+    font-family: monreg;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  .ask .ask__form {
+    display: inline-block;
+    width: 280px;
+    height: 330px;
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; }
+  .ask .ask__form input {
+    display: block;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid black;
+    margin-top: 35px; } }

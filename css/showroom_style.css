@@ -687,7 +687,10 @@ footer {
 .map iframe {
   width: 1280px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -763,3 +766,98 @@ footer {
     padding: 0 0 30px 30px; }
   .chairs__form {
     margin-left: 30px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .head {
+    height: 566px; }
+  .head .bread ul {
+    margin-left: 20px; }
+  .head .head__news__back {
+    display: block;
+    margin: 35px 0 0 20px; }
+  .head h3 {
+    font-family: monreg;
+    font-size: 30px;
+    color: #fff;
+    margin: 100px 0 0 20px;
+    padding: 0; }
+  .head p {
+    font-family: monreg;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin: 20px 20px 0 20px;
+    padding: 0;
+    width: 280px; }
+  .head .head__3d {
+    font-family: monbold;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    display: inline-block;
+    margin: 40px 20px 0 20px;
+    padding: 25px 68px; }
+  .address .address__block h3 {
+    font-family: monlight;
+    font-size: 30px;
+    color: #000;
+    margin: 0;
+    padding: 40px 20px; }
+  .address .address__block p {
+    display: inline-block;
+    width: 275px;
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0px 0 0 20px;
+    padding: 0px 0 20px 0; }
+  .address .address__block .block__contacts {
+    margin-left: 20px; }
+  .address .address__block2 h4 {
+    font-family: monreg;
+    font-size: 23px;
+    color: #000;
+    margin: 0;
+    padding: 0px 0 30px 20px;
+    width: 280px; }
+  .address .address__block2 span {
+    display: block;
+    font-family: monreg;
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+    padding: 0 0 30px 20px;
+    width: 190px; }
+  .chairs__form {
+    margin-left: 20px;
+    width: 280px;
+    height: 190px;
+    background-color: #fff; }
+  .chairs__form .form__date {
+    width: 80%;
+    margin-left: 10%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 60px; }
+  .chairs__form .form__phone {
+    width: 80%;
+    margin-left: 10%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 40px;
+    padding-bottom: 5px; }
+  .chairs__form .form__submit {
+    margin-top: 18px;
+    float: right;
+    margin-right: 10%;
+    font-family: monbold;
+    font-size: 14px;
+    background-color: #fff;
+    border: none; }
+  .map iframe {
+    width: 320px; } }

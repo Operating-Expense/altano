@@ -12,15 +12,23 @@
 <body>
 	<section class="container head">
 		<header class="container header">
-			<img src="img/svg/logowhite.svg" alt="altano" width="160" height="40" class="header__element" />
+			<img src="img/svg/logowhite.svg" alt="altano" width="160" height="40" class="header__element">
 			<a href="#" class="header__contacts header__element1">Киев</a>
-			<a href="tel:+380675605970" class="header__contacts header__element2">+38 (067) 560 59 70
-			</a>
-			<a href="#" class="header__element3"><img class="search-btn" src="img/search_white.png" alt="" width="19" height="19" /></a>
-			<div class="header__element4">
-				<img src="img/bag_white.png" alt="" width="19" height="19" />
+			<a href="tel:+380675605970" class="header__contacts header__element2">+38 (067) 560 59 70 </a>
+			<a href="#" class="header__element3"><img class="search-btn" src="img/search_white.png" alt="" width="19" height="19"></a>
+			<div class="header__element4"><img class="header-cart" src="img/bag_white.png" alt="" width="19" height="19">
+				<div class="cart-items-count hide"></div>
+				<div class="cart-dropdown">
+					<div class="cart-items">
+					</div>
+					<div class="cart-total">
+						<span>К оплате:</span>
+						<span class="cart-total__price"><span></span> грн.</span>
+						<a href="./order.html" class="cart-checkout">Оформить Заказ</a>
+					</div>
+				</div>
 			</div>
-			<a href="#" class="header__element5"><img class="header-menu-btn" src="img/menu_white.png" alt="" width="19" height="19" /></a>
+			<a href="#" class="header__element5"><img class="header-menu-btn" src="img/menu_white.png" alt="" width="19" height="19"></a>
 			<a href="#" class="header__button header__element6">ПОСЕТИТЬ ШОУРУМ</a>
 		</header>
 		<div class="header__naming">
@@ -33,8 +41,8 @@
 			<img class="head__arrow--left" src="img/arrow_left.png" alt="" />
 			<img class="head__arrow--right" src="img/arrow_rigth.png" alt="" />
 		</div>
-		<a href="#" class="head__cat">КАТАЛОГ</a>
-		<a href="#" class="head__rect">
+		<a href="./catalog.html" class="head__cat">КАТАЛОГ</a>
+		<a href="./catalog.html" class="head__rect">
 			<img src="img/arrow_rectan.png" alt="" width="190" height="80" />
 		</a>
 		<img src="img/blue_chair.jpg" alt="" class="head__chairimg" />
@@ -165,11 +173,13 @@
 			</p>
 		</div>
 		<div class="chairs__form">
-			<form action="">
-				<input class="form__date" type="date" id="calendar" /><label for="calendar"><img src="img/svg/calendar.svg" class="calendar__img"
-					 alt="" /></label>
+			<form action="" class="reserve-date">
+				<input class="form__date" name="date" type="date" id="calendar" />
+				<label for="calendar">
+					<img src="img/svg/calendar.svg" class="calendar__img" alt="" />
+				</label>
 
-				<input class="form__phone" type="tel" value="Ваш телефон" />
+				<input class="form__phone" name="tel" type="tel" placeholder="Ваш телефон" required />
 				<input type="submit" value="ОТПРАВИТЬ" class="form__submit" />
 			</form>
 		</div>
@@ -347,14 +357,14 @@
 			<li><a href="">HoReCa</a></li>
 		</ul>
 		<ul class="dropdown-menu__links">
-			<li><a href="">О компании</a></li>
-			<li><a href="">Партнерам</a></li>
-			<li><a href="">Производители</a></li>
-			<li><a href="">Производители</a></li>
-			<li><a href="">Гарантия и возврат</a></li>
-			<li><a href="">Оплата и доставка</a></li>
-			<li><a href="">Уход и эксплуатация</a></li>
-			<li><a href="">Контакты</a></li>
+			<li><a href="./about.html">О компании</a></li>
+			<li><a href="./partner.html">Партнерам</a></li>
+			<li><a href="./producer.html">Производители</a></li>
+			<li><a href="./news.html">Новости</a></li>
+			<li><a href="./warranty.html">Гарантия и возврат</a></li>
+			<li><a href="./pay.html">Оплата и доставка</a></li>
+			<li><a href="./care.html">Уход и эксплуатация</a></li>
+			<li><a href="./contacts.html">Контакты</a></li>
 		</ul>
 	</div>
 	<script src="js/main.js"></script>

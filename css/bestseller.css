@@ -778,7 +778,10 @@ aside p {
   .header .header__contacts {
     color: #000; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -816,3 +819,28 @@ aside p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .catalog__header a {
+    display: none; }
+  .catalog__header h3 {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 67%;
+    font-size: 30px; }
+  .catalog .catalog__group .catalog__group__box {
+    width: 300px;
+    height: 450px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: -20px; }
+  .chairs {
+    margin-top: -35px; } }

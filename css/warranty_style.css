@@ -588,7 +588,10 @@ body {
     line-height: 24px;
     list-style: square; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -667,7 +670,7 @@ body {
       border: none;
       cursor: pointer; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .ask {
     background-image: url(../img/pay_ask_us.jpg);
     position: relative;
@@ -762,7 +765,7 @@ body {
     .about__why .about__grid .about__6 {
       grid-area: 2 / 4 / 3 / 5; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .about {
     background-color: #f8f7f7;
     padding-top: 100px;
@@ -830,3 +833,115 @@ body {
     color: #fff; }
   .header .header__contacts {
     color: #000; }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden; }
+  .all h3 {
+    font-family: monreg;
+    font-size: 30px;
+    padding-top: 30px;
+    margin: 0px 0px 15px 20px; }
+  .all h4 {
+    font-family: monreg;
+    font-size: 18px;
+    margin: 30px 0 20px 20px; }
+  .all ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px; }
+  .all li {
+    font-family: monlight;
+    font-size: 14px;
+    margin: 10px 0 20px 10px;
+    padding-left: 20px;
+    line-height: 24px;
+    list-style: square; }
+  .ask {
+    background-image: url(../img/pay_ask_us.jpg);
+    position: relative;
+    display: block;
+    height: auto;
+    background-size: cover; }
+  .ask .ask__q {
+    display: inline-block;
+    width: auto; }
+  .ask .ask__q h3 {
+    color: #fff;
+    font-family: monreg;
+    font-size: 30px;
+    margin: 40px 0 0px 20px; }
+  .ask .ask__q p {
+    color: #fff;
+    font-family: monreg;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  .ask .ask__form {
+    display: inline-block;
+    width: 280px;
+    height: 330px;
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; }
+  .ask .ask__form input {
+    display: block;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid black;
+    margin-top: 35px; }
+  .about {
+    padding-top: 160px; }
+  .about__why {
+    display: block; }
+  .about__why .about__img {
+    width: 325px;
+    height: 375px; }
+  .about__why .about__why__h3 {
+    font-size: 30px;
+    position: relative;
+    bottom: 496px;
+    margin-left: 20px; }
+  .about__why .about__grid {
+    display: block;
+    width: 275px;
+    margin-left: 51px;
+    margin-top: -302px; }
+  .about__why .about__grid h3 {
+    margin: 0;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: -34px; }
+  .about__why .about__grid p {
+    font-family: monlight;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-bottom: 79px; }
+  .about__why .about__why__h3 {
+    font-size: 30px;
+    position: relative;
+    bottom: 520px;
+    margin-left: 20px; }
+  .about__why .about__img {
+    width: 325px;
+    height: 375px;
+    transform: translate(-5px, -59px); }
+  .all p {
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 20px; }
+  .all h5 {
+    font-family: monreg;
+    font-size: 16px;
+    margin: 30px 20px; } }

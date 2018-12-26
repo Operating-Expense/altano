@@ -565,7 +565,7 @@ li {
       margin: 0;
       line-height: 30px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .wellc {
     height: 1020px;
     background-position: 30%; }
@@ -643,7 +643,10 @@ li {
     min-width: 630px;
     height: 500px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+.team__flex__arrow {
+  transform: translateY(-50px); }
+
+@media only screen and (max-width: 1278px) {
   .prof {
     background-color: #f8f7f7;
     position: relative;
@@ -752,7 +755,7 @@ li {
       font-family: monlight;
       font-size: 14px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .team {
     background-color: #f8f7f7; }
     .team .partners {
@@ -801,3 +804,176 @@ li {
     height: 270px; }
   .circle__flex__none {
     display: none; } }
+
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: visible; }
+  .wellc {
+    background-image: url(../img/about_back.jpg);
+    height: 568px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .wellc div {
+    width: 280px;
+    padding: 60px 20px 0 20px;
+    color: #fff; }
+  .wellc div h3 {
+    font-family: monlight;
+    font-size: 38px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-right: 0; }
+  .wellc div p {
+    font-family: monreg;
+    font-size: 16px;
+    margin: 0;
+    line-height: 28px; }
+  .prof .wellc_box1 {
+    position: relative;
+    z-index: 2;
+    width: 280px;
+    min-width: 280px;
+    height: 190px;
+    margin: 40px 20px; }
+  .prof .wellc_box2 {
+    min-width: 280px; }
+  .prof .wellc_box2 h3 {
+    margin: 10px 20px;
+    font-size: 30px;
+    padding: 0; }
+  .prof .wellc_box2 p {
+    font-family: monreg;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 20px; }
+  .prof .wellc_box3 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-width: 280px;
+    height: auto;
+    order: 4; }
+  .prof .wellc_box4 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-width: 280px;
+    height: 190px;
+    margin: 0 20px;
+    order: 3;
+    margin-top: 110px; }
+  .prof .wellc_box3 h3 {
+    margin: 30px 20px;
+    font-family: monlight;
+    font-size: 30px; }
+  .prof .wellc_box3 p {
+    margin: 0 20px; }
+  .about {
+    padding-top: 100px; }
+  .about__why {
+    display: block; }
+  .about__why .about__img {
+    width: 325px;
+    height: 375px; }
+  .about__why .about__why__h3 {
+    font-size: 30px;
+    position: relative;
+    bottom: 496px;
+    margin-left: 20px; }
+  .about__why .about__grid {
+    display: block;
+    width: 275px;
+    margin-left: 51px;
+    margin-top: -302px; }
+  .about__why .about__grid h3 {
+    margin: 0;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: -34px; }
+  .about__why .about__grid p {
+    font-family: monlight;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-bottom: 79px; }
+  .prof .wellc__white__rect {
+    display: none; }
+  .team h4 {
+    font-family: monlight;
+    font-size: 30px;
+    margin: 0;
+    padding-left: 20px;
+    margin-top: -5px; }
+  .team__flex__none__320 {
+    display: none; }
+  .team .team__flex {
+    padding-bottom: 70px; }
+  .team .partners .partners__white {
+    background-color: #fff;
+    position: absolute;
+    top: -70px;
+    left: 0px;
+    bottom: -220px;
+    right: 0px;
+    z-index: 0; }
+  .team .partners__circle {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 150px;
+    margin-top: 45px; }
+  .partners {
+    display: block;
+    margin-top: 30px; }
+  .partners h3 {
+    font-size: 30px;
+    margin: 0px 20px;
+    padding: 0; }
+  .partners a {
+    display: block;
+    margin: 30px 20px; }
+  .team .partners__circle {
+    display: block;
+    padding-bottom: 100px; }
+  .partners__circle__hide {
+    display: none; }
+  .partners__circle__320 {
+    width: 60px; }
+  .chairs {
+    display: block;
+    background-image: url(../img/chairs_background.jpg);
+    padding-bottom: 20px; }
+  .chairs .chairs__text h3 {
+    color: #fff;
+    font-size: 30px;
+    margin: 20px 20px; }
+  .chairs .chairs__text p {
+    color: #fff;
+    font-family: monlight;
+    font-size: 18px;
+    margin: 0 20px;
+    margin-bottom: 20px; }
+  .chairs .chairs__form {
+    grid-area: 1 / 6 / 2 /8;
+    align-self: center;
+    justify-self: start;
+    width: 280px;
+    height: 190px;
+    background-color: #fff;
+    margin: 30px 20px; }
+  .chairs .chairs__form .form__date {
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 35px; }
+  .chairs .chairs__form .form__submit {
+    margin-top: 25px; } }

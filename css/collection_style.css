@@ -617,7 +617,7 @@ body {
     bottom: 75px;
     text-transform: uppercase; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -756,7 +756,7 @@ body {
     width: 1080px;
     height: 726px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .few__2 {
     order: -1; }
   .few__flex {
@@ -898,7 +898,7 @@ body {
         left: 35px;
         bottom: 30px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .item .catalog__group {
     grid-area: 2 / 2 / 3 / 10;
     margin: 0;
@@ -981,7 +981,10 @@ body {
     font-family: monlight;
     font-size: 30px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .chairs {
     display: grid;
     grid-template-columns: 30px 660px 78px;
@@ -1040,3 +1043,145 @@ body {
         font-size: 16px;
         background-color: #fff;
         border: none; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden; }
+  .head .bread ul {
+    margin-left: 20px; }
+  .head .bread ul li a img {
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .head .bread ul li a {
+    font-size: 11px; }
+  .head h4 {
+    margin: 0;
+    padding: 50px 30px 200px 20px;
+    font-family: monreg;
+    font-size: 30px;
+    color: #fff; }
+  .head {
+    background-image: url(../img/Untitled-1.jpg);
+    position: relative;
+    height: 568px;
+    background-size: cover;
+    background-position: 55%; }
+  .few__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+    padding: 0; }
+  .few__flex p {
+    width: auto;
+    padding: 0;
+    margin: 40px 0px;
+    font-size: 14px; }
+  .few__3 img, .few__1 img {
+    width: 280px;
+    height: 180px;
+    padding-bottom: 20px; }
+  .few__4 img {
+    width: 280px;
+    height: 190px;
+    padding-top: 0px; }
+  .beaty h5 {
+    font-family: monreg;
+    font-size: 30px;
+    padding: 0;
+    margin: 15px 20px 20px 15px; }
+  .beaty .flex__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 20px;
+    margin-bottom: 50px; }
+  .beaty .flex__text p {
+    width: 100%;
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0; }
+  .beaty .beaty__img {
+    position: relative;
+    margin: 0 20px;
+    overflow: hidden; }
+  .beaty .beaty__img .beaty__img__main {
+    width: 470px;
+    height: 100%;
+    margin: 0; }
+  .beaty .beaty__img .beaty__pointer3 {
+    position: absolute;
+    right: 137px;
+    top: 194px;
+    width: 30px; }
+  .beaty .beaty__img .beaty__pointer {
+    position: absolute;
+    left: 194px;
+    top: 133px;
+    width: 30px; }
+  .beaty h6 {
+    font-family: monreg;
+    font-size: 30px;
+    padding: 0;
+    margin: 30px 10px 30px 20px; }
+  .beaty video {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 215px; }
+  .item {
+    display: block; }
+  .item h3 {
+    font-family: monlight;
+    font-size: 30px;
+    margin: 20px;
+    margin-top: 35px; }
+  .item .catalog__group .catalog__group__box {
+    width: 280px;
+    height: 390px;
+    background-color: #fff;
+    position: relative;
+    margin: 15px 20px; }
+  .item .catalog__group .catalog__group__box a {
+    padding: 14px 70px; }
+  .chairs {
+    display: block;
+    background-image: url(../img/chairs_background.jpg); }
+  .chairs .chairs__text h3 {
+    color: #fff;
+    font-size: 30px;
+    margin: 20px 20px; }
+  .chairs .chairs__text p {
+    color: #fff;
+    font-family: monlight;
+    font-size: 18px;
+    margin: 0 20px;
+    margin-bottom: 20px; }
+  .chairs .chairs__form {
+    grid-area: 1 / 6 / 2 /8;
+    align-self: center;
+    justify-self: start;
+    width: 280px;
+    height: 190px;
+    background-color: #fff;
+    margin: 30px 20px; }
+  .chairs .chairs__form .form__date {
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 35px; }
+  .chairs .chairs__form .form__submit {
+    margin-top: 25px; }
+  .item {
+    display: block;
+    margin-bottom: 150px; }
+  .chairs .chairs__form {
+    transform: translateY(105px); } }

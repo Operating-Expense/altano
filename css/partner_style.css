@@ -630,7 +630,10 @@ body {
     width: 250px;
     display: inline-block; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
   .container {
     max-width: 768px;
     margin-right: auto;
@@ -693,7 +696,7 @@ body {
       border: none;
       cursor: pointer; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .ask {
     background-image: url(../img/pay_ask_us.jpg);
     position: relative;
@@ -784,7 +787,7 @@ body {
     .about__why .about__grid .about__6 {
       grid-area: 2 / 4 / 3 / 5; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .about {
     background-color: #f8f7f7;
     padding-top: 100px;
@@ -898,7 +901,7 @@ h3 {
   font-family: monlight;
   font-size: 30px; }
 
-@media (min-width: 767px) and (max-width: 1278px) {
+@media only screen and (max-width: 1278px) {
   .intrend {
     display: grid;
     grid-template-columns: 30px 375px 46px 287px 30px;
@@ -951,3 +954,188 @@ h3 {
       .intrend .intrend__flex img {
         padding-left: 50px;
         padding-bottom: 50px; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden; }
+  .partners h3 {
+    margin: 0;
+    padding: 30px 0 40px 0;
+    margin-left: 20px;
+    font-family: monreg;
+    font-size: 30px; }
+  .partners .partners__info {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px; }
+  .partners .partners__we {
+    position: absolute;
+    top: 90px;
+    width: 280px;
+    display: inline-block;
+    margin-left: 20px; }
+  .partners .partners__we img {
+    width: 280px; }
+  .partners .partners__info {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 525px; }
+  .partners .partners__info h4 {
+    margin: 0;
+    padding: 0;
+    font-family: monreg;
+    font-size: 24px;
+    padding-bottom: 30px;
+    width: 280px; }
+  .partners .partners__info ol li {
+    list-style-type: decimal;
+    padding-left: 12px;
+    padding-bottom: 30px;
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 24px; }
+  .partners .partners__info ul li {
+    list-style-type: square;
+    padding-left: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 24px; }
+  .width__768 {
+    width: 280px; }
+  .partners .partners__info h5 {
+    margin: 0;
+    padding: 5px 0;
+    font-family: monreg;
+    font-size: 16px;
+    width: 280px; }
+  .partners .partners__info ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+    width: 280px; }
+  .partners .partners__info p {
+    font-family: monlight;
+    font-size: 14px;
+    line-height: 24px;
+    width: 280px; }
+  .partners .partners__info h4 {
+    margin: 0;
+    padding: 0;
+    font-family: monreg;
+    font-size: 16px;
+    padding-bottom: 20px;
+    width: 280px;
+    margin-top: 30px; }
+  .ask {
+    background-image: url(../img/pay_ask_us.jpg);
+    position: relative;
+    display: block;
+    height: auto;
+    background-size: cover; }
+  .ask .ask__q {
+    display: inline-block;
+    width: auto; }
+  .ask .ask__q h3 {
+    color: #fff;
+    font-family: monreg;
+    font-size: 30px;
+    margin: 40px 0 0px 20px; }
+  .ask .ask__q p {
+    color: #fff;
+    font-family: monreg;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  .ask .ask__form {
+    display: inline-block;
+    width: 280px;
+    height: 330px;
+    background-color: #fff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; }
+  .ask .ask__form input {
+    display: block;
+    border: none;
+    width: 220px;
+    border-bottom: 1px solid black;
+    margin-top: 35px; }
+  .about {
+    padding-top: 150px; }
+  .about__why {
+    display: block; }
+  .about__why .about__img {
+    width: 325px;
+    height: 375px; }
+  .about__why .about__why__h3 {
+    font-size: 30px;
+    position: relative;
+    bottom: 496px;
+    margin-left: 20px; }
+  .about__why .about__grid {
+    display: block;
+    width: 275px;
+    margin-left: 51px;
+    margin-top: -302px; }
+  .about__why .about__grid h3 {
+    margin: 0;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: -34px; }
+  .about__why .about__grid p {
+    font-family: monlight;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-bottom: 79px; }
+  .about__why .about__why__h3 {
+    font-size: 30px;
+    position: relative;
+    bottom: 520px;
+    margin-left: 20px; }
+  .about__why .about__img {
+    width: 325px;
+    height: 375px;
+    transform: translate(-5px, -59px); }
+  .intrend .intrend__bg {
+    display: none; }
+  .intrend {
+    display: block; }
+  .intrend h3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    font-family: monlight;
+    font-size: 30px;
+    margin: 20px;
+    padding: 0;
+    margin-top: 0px; }
+  .intrend p {
+    margin: 0 20px;
+    font-family: 16px;
+    width: 280px; }
+  .intrend .intrend__flex img {
+    padding-left: 38px;
+    width: 56px;
+    padding-bottom: 15px;
+    padding-top: 15px; }
+  .intrend .intrend__flex {
+    padding-bottom: 10px;
+    padding-top: 25px; }
+  .intrend .intrend__white {
+    height: 310px;
+    width: 950px;
+    background-color: #fff;
+    position: absolute;
+    top: 165px;
+    right: 0px;
+    z-index: 0; } }
