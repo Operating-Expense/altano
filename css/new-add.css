@@ -635,3 +635,63 @@ body {
 .choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color10 {
   margin-right: 8px;
 }
+
+a,
+.header__button,
+.head__arrow--right,
+.head__arrow--left,
+.catalogue__relax__href,
+.catalogue__dinner__href,
+.horeca__href,
+.swing__href,
+.umbrella__href,
+.accessories__href,
+.ready__href,
+.header-menu-btn,
+.search-btn {
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover {
+  color: #696969;
+}
+
+.header__button:hover {
+  background: #696969;
+  color: #fff;
+}
+
+.head__arrow--right:hover,
+.head__arrow--left:hover,
+.header-menu-btn:hover,
+.search-btn:hover {
+  opacity: .5;
+}
+
+.catalogue__relax__href:hover,
+.catalogue__dinner__href:hover,
+.horeca__href:hover,
+.swing__href:hover,
+.umbrella__href:hover,
+.accessories__href:hover,
+.ready__href:hover {
+  padding-left: 10px;
+}
+
+.anim-left-start,
+.anim-right-start {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.anim-left-start {
+  transform: translateX(-100%);
+}
+
+.anim-right-start {
+  transform: translateX(100%);
+}
+
+.anim-end {
+  transform: translateX(0) !important;
+
+}

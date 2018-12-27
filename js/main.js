@@ -27,27 +27,23 @@ document.addEventListener("click", e => {
 const sliders = {
   slide1: {
     img: "head.jpg",
-    title:
-      "<h2>1Mrbel</h2><h2>Mrbel Furniture</h2><p>Exelent choise for home comfort</p>",
-    preview: "blue_chair.jpg"
+    title: "<h2>Mebel</h2><h2>Mebel Furniture</h2><p>Exelent choise for home comfort</p>",
+    preview: "slide1_preview.jpg"
   },
   slide2: {
     img: "slide2.jpg",
-    title:
-      "<h2>2Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
-    preview: "red_chair.jpg"
+    title: "<h2>Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
+    preview: "slide2_preview.jpg"
   },
   slide3: {
     img: "head.jpg",
-    title:
-      "<h2>3Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
-    preview: "blue_chair.jpg"
+    title: "<h2>Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
+    preview: "slide1_preview.jpg"
   },
   slide4: {
     img: "slide2.jpg",
-    title:
-      "<h2>4Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
-    preview: "red_chair.jpg"
+    title: "<h2>Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
+    preview: "slide2_preview.jpg"
   }
 };
 
@@ -456,3 +452,19 @@ document.querySelector(".cart-checkout").addEventListener("click", () => {
   preventDefault();
   window.location.href = "./order.html";
 });
+
+
+function animationSlide(pos, elem) {
+  const block = document.querySelector(elem);
+  if (pos == 'left') {
+    block.classList.add('anim-left-start');
+  }
+  if (pos == 'right') {
+    block.classList.add('anim-right-start');
+  }
+  setTimeout(() => {
+    block.classList.add('anim-end');
+  }, 1000);
+}
+
+animationSlide('left', '.about__img');
