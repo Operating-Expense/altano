@@ -1,0 +1,766 @@
+@font-face {
+  font-family: monblack;
+  src: url(../fonts/Montserrat-Black.ttf); }
+
+@font-face {
+  font-family: monblackitalic;
+  src: url(../fonts/Montserrat-BlackItalic.ttf); }
+
+@font-face {
+  font-family: monbold;
+  src: url(../fonts/Montserrat-Bold.ttf); }
+
+@font-face {
+  font-family: monbolditalic;
+  src: url(../fonts/Montserrat-BoldItalic.ttf); }
+
+@font-face {
+  font-family: monexb;
+  src: url(../fonts/Montserrat-ExtraBold.ttf); }
+
+@font-face {
+  font-family: monexbitalic;
+  src: url(../fonts/Montserrat-ExtraBoldItalic.ttf); }
+
+@font-face {
+  font-family: monexli;
+  src: url(../fonts/Montserrat-ExtraLight.ttf); }
+
+@font-face {
+  font-family: monexliit;
+  src: url(../fonts/Montserrat-ExtraLightItalic.ttf); }
+
+@font-face {
+  font-family: monitalic;
+  src: url(../fonts/Montserrat-Italic.ttf); }
+
+@font-face {
+  font-family: monlight;
+  src: url(../fonts/Montserrat-Light.ttf); }
+
+@font-face {
+  font-family: monlightitalic;
+  src: url(../fonts/Montserrat-LightItalic.ttf); }
+
+@font-face {
+  font-family: monmed;
+  src: url(../fonts/Montserrat-Medium.ttf); }
+
+@font-face {
+  font-family: monmeditalic;
+  src: url(../fonts/Montserrat-MediumItalic.ttf); }
+
+@font-face {
+  font-family: monreg;
+  src: url(../fonts/Montserrat-Regular.ttf); }
+
+@font-face {
+  font-family: monsemibold;
+  src: url(../fonts/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: monthin;
+  src: url(../fonts/Montserrat-Thin.ttf); }
+
+@font-face {
+  font-family: monsemibolditalic;
+  src: url(../fonts/Montserrat-SemiBoldItalic.ttf); }
+
+@font-face {
+  font-family: monthinitalic;
+  src: url(../fonts/Montserrat-ThinItalic.ttf); }
+
+.header {
+  display: grid;
+  grid-template-columns: 30fr 70fr 130fr 70fr 190fr 150fr 150fr 80fr 60fr 60fr 60fr 130fr 70fr 30fr;
+  grid-template-rows: 90px;
+  align-items: center; }
+
+.header__button {
+  font-family: monbold;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+  padding: 16px 30px;
+  background-color: #fff; }
+
+.header__contacts {
+  font-family: monreg;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0; }
+
+.header__element {
+  grid-column-start: 2;
+  grid-column-end: 4; }
+  .header__element1 {
+    grid-column-start: 4;
+    grid-column-end: 5; }
+  .header__element2 {
+    grid-column-start: 5;
+    grid-column-end: 6; }
+  .header__element3 {
+    grid-column-start: 9;
+    grid-column-end: 10; }
+  .header__element4 {
+    grid-column-start: 10;
+    grid-column-end: 11; }
+  .header__element5 {
+    grid-column-start: 11;
+    grid-column-end: 12; }
+  .header__element6 {
+    grid-column-start: 12;
+    grid-column-end: 14; }
+
+@media (min-width: 767px) and (max-width: 1278px) {
+  .header {
+    display: grid;
+    grid-template-columns: 30fr 140fr 25fr 30fr 25fr 115fr 45fr 25fr 25fr 25fr 25fr 35fr 25fr 165fr 33fr;
+    grid-template-rows: 80px;
+    align-items: center; }
+  .header__button {
+    font-family: monsemibold;
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: #fff;
+    text-align: center; }
+  .header__contacts {
+    font-family: monreg;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0; }
+  .header__element {
+    grid-column-start: 2;
+    grid-column-end: 3; }
+    .header__element1 {
+      grid-column-start: 4;
+      grid-column-end: 5; }
+    .header__element2 {
+      grid-column-start: 6;
+      grid-column-end: 7; }
+    .header__element3 {
+      grid-column-start: 8;
+      grid-column-end: 9; }
+    .header__element4 {
+      grid-column-start: 10;
+      grid-column-end: 11; }
+    .header__element5 {
+      grid-column-start: 12;
+      grid-column-end: 13; }
+    .header__element6 {
+      grid-column-start: 14;
+      grid-column-end: 15; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__element6 {
+    display: none; }
+  .header__element2 {
+    display: none; }
+  .header__element1 {
+    display: none; }
+  .header {
+    grid-template-columns: 30fr 70fr 100fr 70fr 190fr 51fr 0fr 100fr 100fr 100fr 100fr 40fr 0fr 0fr; } }
+
+@font-face {
+  font-family: monblack;
+  src: url(../fonts/Montserrat-Black.ttf); }
+
+@font-face {
+  font-family: monblackitalic;
+  src: url(../fonts/Montserrat-BlackItalic.ttf); }
+
+@font-face {
+  font-family: monbold;
+  src: url(../fonts/Montserrat-Bold.ttf); }
+
+@font-face {
+  font-family: monbolditalic;
+  src: url(../fonts/Montserrat-BoldItalic.ttf); }
+
+@font-face {
+  font-family: monexb;
+  src: url(../fonts/Montserrat-ExtraBold.ttf); }
+
+@font-face {
+  font-family: monexbitalic;
+  src: url(../fonts/Montserrat-ExtraBoldItalic.ttf); }
+
+@font-face {
+  font-family: monexli;
+  src: url(../fonts/Montserrat-ExtraLight.ttf); }
+
+@font-face {
+  font-family: monexliit;
+  src: url(../fonts/Montserrat-ExtraLightItalic.ttf); }
+
+@font-face {
+  font-family: monitalic;
+  src: url(../fonts/Montserrat-Italic.ttf); }
+
+@font-face {
+  font-family: monlight;
+  src: url(../fonts/Montserrat-Light.ttf); }
+
+@font-face {
+  font-family: monlightitalic;
+  src: url(../fonts/Montserrat-LightItalic.ttf); }
+
+@font-face {
+  font-family: monmed;
+  src: url(../fonts/Montserrat-Medium.ttf); }
+
+@font-face {
+  font-family: monmeditalic;
+  src: url(../fonts/Montserrat-MediumItalic.ttf); }
+
+@font-face {
+  font-family: monreg;
+  src: url(../fonts/Montserrat-Regular.ttf); }
+
+@font-face {
+  font-family: monsemibold;
+  src: url(../fonts/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: monthin;
+  src: url(../fonts/Montserrat-Thin.ttf); }
+
+@font-face {
+  font-family: monsemibolditalic;
+  src: url(../fonts/Montserrat-SemiBoldItalic.ttf); }
+
+@font-face {
+  font-family: monthinitalic;
+  src: url(../fonts/Montserrat-ThinItalic.ttf); }
+
+@font-face {
+  font-family: monblack;
+  src: url(../fonts/Montserrat-Black.ttf); }
+
+@font-face {
+  font-family: monblackitalic;
+  src: url(../fonts/Montserrat-BlackItalic.ttf); }
+
+@font-face {
+  font-family: monbold;
+  src: url(../fonts/Montserrat-Bold.ttf); }
+
+@font-face {
+  font-family: monbolditalic;
+  src: url(../fonts/Montserrat-BoldItalic.ttf); }
+
+@font-face {
+  font-family: monexb;
+  src: url(../fonts/Montserrat-ExtraBold.ttf); }
+
+@font-face {
+  font-family: monexbitalic;
+  src: url(../fonts/Montserrat-ExtraBoldItalic.ttf); }
+
+@font-face {
+  font-family: monexli;
+  src: url(../fonts/Montserrat-ExtraLight.ttf); }
+
+@font-face {
+  font-family: monexliit;
+  src: url(../fonts/Montserrat-ExtraLightItalic.ttf); }
+
+@font-face {
+  font-family: monitalic;
+  src: url(../fonts/Montserrat-Italic.ttf); }
+
+@font-face {
+  font-family: monlight;
+  src: url(../fonts/Montserrat-Light.ttf); }
+
+@font-face {
+  font-family: monlightitalic;
+  src: url(../fonts/Montserrat-LightItalic.ttf); }
+
+@font-face {
+  font-family: monmed;
+  src: url(../fonts/Montserrat-Medium.ttf); }
+
+@font-face {
+  font-family: monmeditalic;
+  src: url(../fonts/Montserrat-MediumItalic.ttf); }
+
+@font-face {
+  font-family: monreg;
+  src: url(../fonts/Montserrat-Regular.ttf); }
+
+@font-face {
+  font-family: monsemibold;
+  src: url(../fonts/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: monthin;
+  src: url(../fonts/Montserrat-Thin.ttf); }
+
+@font-face {
+  font-family: monsemibolditalic;
+  src: url(../fonts/Montserrat-SemiBoldItalic.ttf); }
+
+@font-face {
+  font-family: monthinitalic;
+  src: url(../fonts/Montserrat-ThinItalic.ttf); }
+
+.footer {
+  background-color: #fff;
+  display: flex;
+  position: relative; }
+  .footer .footer__left {
+    display: inline-block; }
+  .footer .footer__altano {
+    width: 132px;
+    height: 32px;
+    margin: 50px 50px 0 30px; }
+  .footer .footer__rights {
+    margin: 145px 0 0 30px;
+    padding-bottom: 50px;
+    font-family: monlight;
+    font-size: 10px; }
+  .footer .footer__flex {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 580px;
+    margin-top: 50px; }
+    .footer .footer__flex ul {
+      margin: 0;
+      padding: 0;
+      margin-left: 70px; }
+      .footer .footer__flex ul li {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px; }
+        .footer .footer__flex ul li a {
+          text-transform: uppercase;
+          font-family: monsemibold;
+          font-size: 10px;
+          color: #7d7d7d; }
+  .footer .footer__right {
+    margin-top: 50px;
+    margin-left: 100px; }
+    .footer .footer__right p {
+      font-family: monlight;
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 30px; }
+    .footer .footer__right .footer__input {
+      font-family: monlight;
+      font-size: 10px;
+      border: none;
+      border-bottom: 1px solid black;
+      width: 270px; }
+    .footer .footer__right .footer__submit {
+      background-color: #fff;
+      color: #000;
+      font-family: monsemibold;
+      font-size: 10px;
+      border: none; }
+  .footer .footer__logos {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 50px;
+    bottom: 50px; }
+    .footer .footer__logos img {
+      width: 17px;
+      height: 17px; }
+    .footer .footer__logos .footer__opex {
+      width: 50px;
+      height: 20px; }
+    .footer .footer__logos a {
+      text-decoration: none; }
+    .footer .footer__logos span {
+      font-family: monlight;
+      font-size: 9px;
+      position: relative;
+      bottom: 15px;
+      right: 3px; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+@media (min-width: 767px) and (max-width: 1278px) {
+  .footer {
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    height: 460px; }
+    .footer .footer__left {
+      display: inline-block; }
+    .footer .footer__altano {
+      width: 132px;
+      height: 32px;
+      margin: 50px 50px 0 30px; }
+    .footer .footer__rights {
+      margin: 300px 0 0 30px;
+      padding-bottom: 50px;
+      font-family: monlight;
+      font-size: 10px; }
+    .footer .footer__flex {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      width: 580px;
+      margin-top: 50px; }
+      .footer .footer__flex ul {
+        margin: 0;
+        padding: 0;
+        margin-left: 30px;
+        margin-right: 20px; }
+        .footer .footer__flex ul li {
+          margin: 0;
+          padding: 0;
+          margin-bottom: 10px;
+          width: 135px; }
+          .footer .footer__flex ul li a {
+            text-transform: uppercase;
+            font-family: monsemibold;
+            font-size: 10px;
+            color: #7d7d7d; }
+    .footer .footer__right {
+      position: absolute;
+      width: 540px;
+      top: 240px;
+      left: 143px; }
+      .footer .footer__right p {
+        font-family: monlight;
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 30px; }
+      .footer .footer__right .footer__input {
+        font-family: monlight;
+        font-size: 10px;
+        border: none;
+        border-bottom: 1px solid black;
+        width: 407px; }
+      .footer .footer__right .footer__submit {
+        background-color: #fff;
+        color: #000;
+        font-family: monsemibold;
+        font-size: 10px;
+        border: none; }
+    .footer .footer__logos {
+      width: 270px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      right: 50px;
+      bottom: 50px; }
+      .footer .footer__logos img {
+        width: 17px;
+        height: 17px; }
+      .footer .footer__logos .footer__opex {
+        width: 50px;
+        height: 20px; }
+      .footer .footer__logos a {
+        text-decoration: none; }
+      .footer .footer__logos span {
+        font-family: monlight;
+        font-size: 9px;
+        position: relative;
+        bottom: 15px;
+        right: 3px; }
+  a {
+    text-decoration: none; }
+  li {
+    list-style: none; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    background-color: #fff;
+    display: block;
+    position: relative;
+    height: 700px; }
+  .footer .footer__left {
+    display: inline-block; }
+  .footer .footer__altano {
+    width: 110px;
+    height: 25px;
+    margin: 40px 0 0 15px; }
+  .footer .footer__rights {
+    margin: 570px 0 0 15px;
+    /* padding-bottom: 50px; */
+    font-family: monlight;
+    font-size: 10px; }
+  .footer .footer__flex {
+    display: block;
+    width: 280px;
+    position: relative;
+    top: -661px; }
+  .footer .footer__flex ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    /* width: 67px; */ }
+  .flex__ul2 {
+    position: relative;
+    top: -205px;
+    left: 165px; }
+  .flex__ul3 {
+    position: relative;
+    top: -175px; }
+  .footer .footer__right {
+    position: relative;
+    top: -827px;
+    left: 20px; }
+  .footer .footer__right p {
+    font-family: monlight;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 7px; }
+  .footer .footer__right .footer__input {
+    font-family: monlight;
+    font-size: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 208px; }
+  .footer .footer__right .footer__submit {
+    background-color: #fff;
+    color: #000;
+    font-family: monsemibold;
+    font-size: 12px;
+    display: inline-block;
+    border: none; }
+  .footer .footer__logos {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 31px;
+    bottom: 85px; }
+  .footer .footer__right {
+    margin-left: 0px;
+    margin-top: 0; } }
+
+body {
+  margin: 0px;
+  background-color: #282828; }
+
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0; }
+
+.bread {
+  background-color: #f8f7f7; }
+
+.bread ul {
+  padding: 0;
+  margin: 0;
+  margin-left: 30px; }
+  .bread ul li {
+    display: inline; }
+    .bread ul li a {
+      padding: 0;
+      margin: 0;
+      font-family: monreg;
+      font-size: 12px;
+      text-decoration: none;
+      color: #bbbaba;
+      background-color: #f8f7f7;
+      text-transform: none; }
+      .bread ul li a img {
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px; }
+
+.bread .bread__last {
+  color: #000; }
+
+.all .all__flex {
+  display: flex; }
+  .all .all__flex aside ul {
+    margin-left: 30px;
+    margin-right: 0;
+    padding-right: 40px;
+    border-right: 1px solid grey; }
+    .all .all__flex aside ul li {
+      list-style: none; }
+      .all .all__flex aside ul li a {
+        font-size: 16px;
+        font-family: monreg;
+        text-decoration: none;
+        color: #000; }
+
+h3.all__naming {
+  font-family: monreg;
+  font-size: 52px;
+  padding-top: 35px;
+  margin: 0px 0 60px 100px; }
+
+.all .all__flex aside ul li {
+  padding-left: 0; }
+
+.all h5 {
+  font-family: monreg;
+  font-size: 18px;
+  margin: 35px 0 30px 0px; }
+
+.all ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 17px;
+  margin-right: 100px; }
+
+main {
+  margin-left: 30px; }
+  main p {
+    font-size: 16px;
+    font-family: monlight;
+    margin-right: 100px; }
+
+h2 {
+  font-size: 36px;
+  font-family: monlight;
+  width: 570px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  position: relative; }
+
+.products {
+  margin-left: 286px; }
+
+.catalog__group {
+  margin: 0;
+  padding: 0;
+  margin-right: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .catalog__group .catalog__group__box {
+    width: 270px;
+    height: 445px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 30px; }
+    .catalog__group .catalog__group__box img {
+      display: block;
+      height: 170px;
+      margin: 0 auto;
+      padding: 30px 0; }
+    .catalog__group .catalog__group__box .box__naming {
+      margin: 0;
+      padding: 0;
+      font-family: monlight;
+      font-size: 18px;
+      margin-left: 35px;
+      margin-bottom: 15px; }
+    .catalog__group .catalog__group__box .box__availability {
+      margin: 0;
+      padding: 0;
+      font-family: monlight;
+      font-size: 12px;
+      margin-left: 35px; }
+    .catalog__group .catalog__group__box .box__price {
+      position: absolute;
+      bottom: 75px;
+      left: 35px;
+      font-family: monlight;
+      font-size: 16px; }
+    .catalog__group .catalog__group__box a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: monsemibold;
+      font-size: 12px;
+      color: #fff;
+      background-color: #000;
+      padding: 15px 60px;
+      position: absolute;
+      left: 35px;
+      bottom: 30px; }
+
+.about {
+  padding: 100px 0; }
+
+.all .all__flex aside ul {
+  width: 183px; }
+
+@media only screen and (max-width: 1278px) {
+  body {
+    margin: 0px;
+    background-color: #f8f7f7; }
+  .container {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .all ul {
+    margin-right: 30px; }
+  main p {
+    margin-right: 30px; }
+  .products {
+    margin-left: 30px; }
+  .catalog__group {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+  .catalog__group .catalog__group__box {
+    width: 230px; }
+  .catalog__group .catalog__group__box .box__naming {
+    margin-left: 15px; }
+  .catalog__group .catalog__group__box .box__availability {
+    margin-left: 15px; }
+  .catalog__group .catalog__group__box .box__price {
+    left: 15px; }
+  .catalog__group .catalog__group__box a {
+    padding: 15px 45px; }
+  .about {
+    padding: 100px 0; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0; }
+  .bread ul {
+    margin-left: 20px; }
+  h3.all__naming {
+    font-family: monreg;
+    font-size: 30px;
+    padding-top: 30px;
+    margin: 0px 0 30px 20px; }
+  .all .all__flex {
+    display: flex;
+    flex-wrap: wrap; }
+  .all .all__flex aside ul {
+    margin-left: 20px;
+    margin-right: 0;
+    padding-right: 40px;
+    border-right: none;
+    border-bottom: 1px solid grey; }
+  main {
+    margin-left: 20px; }
+  h2 {
+    font-size: 24px;
+    font-family: monlight;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative; }
+  .products {
+    margin-left: 20px; }
+  .none__320 {
+    display: none; }
+  .catalog__group .catalog__group__box {
+    width: 230px;
+    margin-left: 25px; }
+  .about__why {
+    display: block;
+    padding-top: 145px; } }

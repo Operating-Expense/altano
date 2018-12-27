@@ -258,13 +258,13 @@ body {
   z-index: 3;
 }
 
-.pointer__key > img {
+.pointer__key>img {
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.pointer__key:hover > img {
+.pointer__key:hover>img {
   opacity: 1;
 }
 
@@ -406,7 +406,7 @@ body {
   align-items: center;
 }
 
-.cart-control__quanity > * {
+.cart-control__quanity>* {
   border: 1px solid #000;
 }
 
@@ -529,12 +529,12 @@ body {
 
   100% {
     opacity: 0;
-    transform: scale(0.6) translate3d(1200px, -1500px, 0)
-      rotate3d(1, 1, 1, 45deg);
+    transform: scale(0.6) translate3d(1200px, -1500px, 0) rotate3d(1, 1, 1, 45deg);
   }
 }
 
 @media screen and (max-width: 1280px) {
+
   .dropdown-search,
   .dropdown-menu {
     padding-left: 10px;
@@ -543,6 +543,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+
   .dropdown-menu__categories,
   .dropdown-menu__links {
     width: 100%;
@@ -554,6 +555,7 @@ body {
 }
 
 @media screen and (max-width: 620px) {
+
   .dropdown-menu__categories,
   .dropdown-menu__links {
     justify-content: center;
@@ -565,7 +567,7 @@ body {
     margin-bottom: 10px;
   }
 
-  .dropdown-menu__header > * {
+  .dropdown-menu__header>* {
     margin-bottom: 10px;
     text-align: center;
   }
@@ -619,4 +621,17 @@ body {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     margin-top: 70px;
   }
+}
+
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color1,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color2,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color3,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color4,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color5,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color6,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color7,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color8,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color9,
+.choose .choose__characteristic .characteristic__param2 .param2__ul .param2__li .param2__color10 {
+  margin-right: 8px;
 }
