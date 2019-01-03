@@ -722,3 +722,13 @@ a:hover {
   padding-right: 0;
   color: #fff;
 }
+
+.catalog .catalog__group .catalog__group__box {
+  transition: all .1s ease-in;
+}
+
+.catalog .catalog__group .catalog__group__box:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+  border-radius: 3px;
+}
