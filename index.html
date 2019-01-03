@@ -6,6 +6,7 @@
 	<title>Altano</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/t-scroll.min.css">
 	<link rel="stylesheet" href="css/new-add.css" />
 </head>
 
@@ -41,9 +42,12 @@
 			<img class="head__arrow--left" src="img/arrow_left.png" alt="" />
 			<img class="head__arrow--right" src="img/arrow_rigth.png" alt="" />
 		</div>
-		<a href="./catalog.html" class="head__cat">КАТАЛОГ</a>
+		<!-- <a href="./catalog.html" class="head__cat">КАТАЛОГ</a>
 		<a href="./catalog.html" class="head__rect">
 			<img src="img/arrow_rectan.png" alt="" width="190" height="80" />
+		</a> -->
+		<a href="./catalog.html" class="arrow-catalog">Каталог
+			<img src="img/arrow-catalog.png" alt="">
 		</a>
 		<img src="img/blue_chair.jpg" alt="" class="head__chairimg" />
 	</section>
@@ -367,7 +371,17 @@
 			<li><a href="./contacts.html">Контакты</a></li>
 		</ul>
 	</div>
+	<script src="js/t-scroll.min.js"></script>
 	<script src="js/main.js"></script>
+	<!-- <script>
+		Tu.tScroll({
+			't-element': '.about__why__h3',
+			't-position': 200,
+			't-animate': 'slideRight',
+			'data-t-show': 3
+		})
+	</script> -->
+
 </body>
 
 </html>

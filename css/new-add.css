@@ -648,14 +648,16 @@ a,
 .accessories__href,
 .ready__href,
 .header-menu-btn,
-.search-btn {
-  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+.search-btn,
+.catalog .catalog__group .catalog__group__box a {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 a:hover {
   color: #696969;
 }
 
+.catalog .catalog__group .catalog__group__box a:hover,
 .header__button:hover {
   background: #696969;
   color: #fff;
@@ -665,7 +667,7 @@ a:hover {
 .head__arrow--left:hover,
 .header-menu-btn:hover,
 .search-btn:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .catalogue__relax__href:hover,
@@ -680,18 +682,43 @@ a:hover {
 
 .anim-left-start,
 .anim-right-start {
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .anim-left-start {
-  transform: translateX(-100%);
+  transform: translateX(-102%);
 }
 
 .anim-right-start {
-  transform: translateX(100%);
+  transform: translateX(102%);
 }
 
 .anim-end {
-  transform: translateX(0) !important;
+  transform: translateX(0);
+}
 
+.container {
+  /* overflow-x: hidden; */
+}
+
+.arrow-catalog {
+  display: inline-block;
+  font-family: monbold;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 300px;
+  height: 80px;
+  line-height: 80px;
+  padding-right: 45px;
+  text-transform: uppercase;
+  background: no-repeat 100% 50% linear-gradient(to left, #fff 100px, transparent 50%);
+  background-size: 100px;
+}
+
+.arrow-catalog:hover {
+  background: no-repeat calc(100% - 50px) 50% linear-gradient(to left, #fff 100px, transparent 50%);
+  background-size: 50px;
+  padding-right: 0;
+  color: #fff;
 }

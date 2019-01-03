@@ -453,18 +453,90 @@ document.querySelector(".cart-checkout").addEventListener("click", () => {
   window.location.href = "./order.html";
 });
 
-
 function animationSlide(pos, elem) {
   const block = document.querySelector(elem);
-  if (pos == 'left') {
-    block.classList.add('anim-left-start');
+  const blockPosition = +block.offsetTop - +block.clientHeight;
+
+  const line = document.createElement("div");
+  line.style.cssText = `height: blockPosition`;
+
+  if (pos == "left") {
+    block.classList.add("anim-left-start");
   }
-  if (pos == 'right') {
-    block.classList.add('anim-right-start');
+  if (pos == "right") {
+    block.classList.add("anim-right-start");
   }
-  setTimeout(() => {
-    block.classList.add('anim-end');
-  }, 1000);
+  document.addEventListener("scroll", () => {
+    if (blockPosition <= window.pageYOffset) {
+      block.classList.add("anim-end");
+      // console.log(blockPosition + " block pos");
+      // console.log(window.pageYOffset + " windows offset");
+    }
+  });
 }
 
-animationSlide('left', '.about__img');
+// animationSlide('left', '.about__img');
+// animationSlide('right', '.about__grid');
+// animationSlide("right", ".about__why__h3");
+Tu.tScroll({
+  't-element': '.about__why__h3',
+  't-position': 200,
+  't-animate': 'slideRight'
+  // 'data-t-show': 3
+})
+Tu.tScroll({
+  't-element': '.about__img',
+  't-position': 200,
+  't-animate': 'slideLeft'
+})
+Tu.tScroll({
+  't-element': '.about__grid',
+  't-position': 200,
+  't-animate': 'slideRight'
+})
+Tu.tScroll({
+  't-element': '.about__1 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .5
+})
+Tu.tScroll({
+  't-element': '.about__2 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .4
+})
+Tu.tScroll({
+  't-element': '.about__3 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .3
+})
+Tu.tScroll({
+  't-element': '.about__4 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .5
+})
+Tu.tScroll({
+  't-element': '.about__5 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .4
+})
+Tu.tScroll({
+  't-element': '.about__6 h3',
+  't-position': 200,
+  't-animate': 'zoomOut',
+  't-delay': .3
+})
+Tu.tScroll({
+  't-element': '.catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1',
+  't-position': 200,
+  't-animate': 'slideLeft'
+})
+Tu.tScroll({
+  't-element': '.catalogue__relax__image, .balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image',
+  't-position': 200,
+  't-animate': 'slideRight'
+})
