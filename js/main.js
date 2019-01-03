@@ -442,16 +442,6 @@ if (range) {
   });
 }
 
-document.querySelector(".header__element").addEventListener("click", () => {
-  window.location.href = "./main.html";
-});
-document.querySelector(".header__element6").addEventListener("click", () => {
-  window.location.href = "./showrooms.html";
-});
-document.querySelector(".cart-checkout").addEventListener("click", () => {
-  preventDefault();
-  window.location.href = "./order.html";
-});
 
 function animationSlide(pos, elem) {
   const block = document.querySelector(elem);
@@ -536,7 +526,19 @@ Tu.tScroll({
   't-animate': 'slideLeft'
 })
 Tu.tScroll({
-  't-element': '.catalogue__relax__image, .balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image',
+  't-element': '.catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image',
   't-position': 200,
   't-animate': 'slideRight'
 })
+
+
+document.querySelector(".header__element").addEventListener("click", () => {
+  window.location.href = "./main.html";
+});
+document.querySelector(".header__element6").addEventListener("click", () => {
+  window.location.href = "./showrooms.html";
+});
+document.querySelector(".cart-checkout").addEventListener("click", () => {
+  preventDefault();
+  window.location.href = "./order.html";
+});
