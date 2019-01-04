@@ -465,6 +465,31 @@ function animationSlide(pos, elem) {
   });
 }
 
+const regionSelect = document.querySelector('.header__element1');
+if (regionSelect) {
+  regionSelect.addEventListener('click', (e) => {
+    const regionDropdown = document.querySelector('.region-select-dropdown');
+    if (regionDropdown.classList.contains('hide')) {
+      regionDropdown.classList.remove('hide');
+      regionDropdown.classList.add('smoothShow');
+    } else {
+      regionDropdown.classList.add('hide');
+      regionDropdown.classList.remove('smoothShow');
+    }
+    if (e.target.nodeName == 'LI') {
+      for (i = 0; i < regionSelect.children.length; i++) {
+        if (regionSelect.children[i].nodeName == 'SPAN') {
+
+          let regionCurrent = regionSelect.children[i].innerHTML;
+          regionSelect.children[i].innerHTML = e.target.innerHTML;
+          e.target.innerHTML = regionCurrent;
+        }
+      }
+    }
+  })
+}
+
+
 // animationSlide('left', '.about__img');
 // animationSlide('right', '.about__grid');
 // animationSlide("right", ".about__why__h3");
