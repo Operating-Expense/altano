@@ -402,11 +402,11 @@ const formReserve = document.querySelector(".reserve-date");
 if (formReserve) {
   var date = new Date();
   var mm = date.getMonth() + 1;
+  mm < 10 ? (mm = "0" + mm) : mm;
   var dd = date.getDate();
+  dd < 10 ? (dd = "0" + dd) : dd;
   var yy = date.getFullYear();
   formReserve["date"].value = `${yy}-${mm}-${dd}`;
-  //formReserve['date'].setAttribute('min').value = `${yy}-${mm}-${dd}`;
-
   formReserve.addEventListener("submit", e => {
     e.preventDefault();
     if (e.target["tel"].value != "" && e.target["tel"].value.length > 6) {
@@ -436,6 +436,24 @@ if (document.querySelector(".show__filters__768")) {
     } else {
       sideFilter.classList.add("show");
     }
+  });
+}
+const sortBtn = document.querySelector(".sort-button");
+if (sortBtn) {
+  sortBtn.addEventListener("click", e => {
+    const sortDropdown = document.querySelector(".sort-dropdown");
+    const sortTitle = document.querySelector(".sort-button span");
+
+    sortDropdown.classList.contains("hide")
+      ? sortDropdown.classList.remove("hide")
+      : sortDropdown.classList.add("hide");
+
+    sortDropdown.addEventListener("click", e => {
+      if (e.target.nodeName == "LI") {
+        sortTitle.innerHTML = e.target.innerHTML;
+        sortDropdown.classList.add("hide");
+      }
+    });
   });
 }
 
@@ -469,24 +487,31 @@ function animationSlide(pos, elem) {
 }
 (function() {
   const rangeInput = document.querySelector(".input-range");
+  if (rangeInput) {
+    const rangeValueMin = document.querySelector(
+      ".input-range__value div:first-child"
+    );
 
-  const rangeValueMin = document.querySelector(
-    ".input-range__value div:first-child"
-  );
-
-  const rangeValueMax = document.querySelector(
-    ".input-range__value div:last-child"
-  );
-  rangeInput.children[0].addEventListener("input", function() {
-    const rangeInputMin = rangeInput.children[0].value;
-    rangeValueMin.setAttribute("style", `left: calc(${rangeInputMin}% - 12px)`);
-    rangeValueMin.innerHTML = rangeInputMin;
-  });
-  rangeInput.children[1].addEventListener("input", function() {
-    const rangeInputMax = rangeInput.children[1].value;
-    rangeValueMax.setAttribute("style", `left: calc(${rangeInputMax}% - 12px)`);
-    rangeValueMax.innerHTML = rangeInputMax;
-  });
+    const rangeValueMax = document.querySelector(
+      ".input-range__value div:last-child"
+    );
+    rangeInput.children[0].addEventListener("input", function() {
+      const rangeInputMin = rangeInput.children[0].value;
+      rangeValueMin.setAttribute(
+        "style",
+        `left: calc(${rangeInputMin}% - 12px)`
+      );
+      rangeValueMin.innerHTML = rangeInputMin;
+    });
+    rangeInput.children[1].addEventListener("input", function() {
+      const rangeInputMax = rangeInput.children[1].value;
+      rangeValueMax.setAttribute(
+        "style",
+        `left: calc(${rangeInputMax}% - 12px)`
+      );
+      rangeValueMax.innerHTML = rangeInputMax;
+    });
+  }
 })();
 
 const regionSelect = document.querySelector(".header__element1");
