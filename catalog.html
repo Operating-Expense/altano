@@ -81,7 +81,14 @@
         <h4>размер</h4>
         <ul>
           <form action="">
-            <h5>Высота (cм)</h5> <input type="range" />
+            <h5>Высота (cм)</h5>
+            <div class="input-range">
+              <input type="range" min="0" max="50" /><input type="range" min="50" max="100" />
+              <div class="input-range__value">
+                <div style="left: calc(25% - 12px)">25</div>
+                <div style="left: calc(75% - 12px)">75</div>
+              </div>
+            </div>
             <h5>Ширина (cм)</h5>
             <input type="range" />
             <h5>Длина (cм)</h5> <input type="range" />

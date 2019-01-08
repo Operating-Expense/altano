@@ -183,6 +183,10 @@ body {
   grid-gap: 20px;
 }
 
+.dropdown-menu__categories li a:hover {
+  color: #696969;
+}
+
 .dropdown-menu__categories li a {
   letter-spacing: 0.7px;
   text-align: left;
@@ -653,8 +657,15 @@ a,
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.arrow_back_with_line span:hover,
+.catalog__header .arrow_back_with_line span:hover,
+.footer .footer__flex ul li a:hover,
 a:hover {
   color: #696969;
+}
+
+.catalog .page__counter a:hover {
+  color: #000;
 }
 
 .catalog .catalog__group .catalog__group__box a:hover,
@@ -843,4 +854,61 @@ a:hover {
   animation: smoothShow 2s ease;
 }
 
-@keyframes smoothHide {}
+.mobile-footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.mobile-footer li {
+  width: 50px;
+  cursor: pointer;
+}
+
+.mobile-footer ul {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  height: 50px;
+  padding: 12px;
+  margin: 0;
+  background: #f8f7f7;
+  box-sizing: content-box;
+}
+
+.input-range__value div {
+  position: absolute;
+  text-align: center;
+  width: 24px;
+}
+
+.input-range__value {
+  position: absolute;
+  width: 100%;
+}
+
+.input-range {
+  position: relative;
+}
+
+.input-range input {
+  width: 50% !important;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .header__element1 {
+    display: none;
+  }
+
+  .arrow-catalog {
+    margin-left: 20px;
+  }
+
+  .mobile-footer {
+    display: block;
+  }
+}

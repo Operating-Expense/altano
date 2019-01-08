@@ -27,22 +27,26 @@ document.addEventListener("click", e => {
 const sliders = {
   slide1: {
     img: "head.jpg",
-    title: "<h2>Mebel</h2><h2>Mebel Furniture</h2><p>Exelent choise for home comfort</p>",
+    title:
+      "<h2>Mebel</h2><h2>Mebel Furniture</h2><p>Exelent choise for home comfort</p>",
     preview: "slide1_preview.jpg"
   },
   slide2: {
     img: "slide2.jpg",
-    title: "<h2>Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
+    title:
+      "<h2>Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
     preview: "slide2_preview.jpg"
   },
   slide3: {
     img: "head.jpg",
-    title: "<h2>Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
+    title:
+      "<h2>Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
     preview: "slide1_preview.jpg"
   },
   slide4: {
     img: "slide2.jpg",
-    title: "<h2>Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
+    title:
+      "<h2>Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
     preview: "slide2_preview.jpg"
   }
 };
@@ -442,7 +446,6 @@ if (range) {
   });
 }
 
-
 function animationSlide(pos, elem) {
   const block = document.querySelector(elem);
   const blockPosition = +block.offsetTop - +block.clientHeight;
@@ -464,98 +467,118 @@ function animationSlide(pos, elem) {
     }
   });
 }
+(function() {
+  const rangeInput = document.querySelector(".input-range");
 
-const regionSelect = document.querySelector('.header__element1');
+  const rangeValueMin = document.querySelector(
+    ".input-range__value div:first-child"
+  );
+
+  const rangeValueMax = document.querySelector(
+    ".input-range__value div:last-child"
+  );
+  rangeInput.children[0].addEventListener("input", function() {
+    const rangeInputMin = rangeInput.children[0].value;
+    rangeValueMin.setAttribute("style", `left: calc(${rangeInputMin}% - 12px)`);
+    rangeValueMin.innerHTML = rangeInputMin;
+  });
+  rangeInput.children[1].addEventListener("input", function() {
+    const rangeInputMax = rangeInput.children[1].value;
+    rangeValueMax.setAttribute("style", `left: calc(${rangeInputMax}% - 12px)`);
+    rangeValueMax.innerHTML = rangeInputMax;
+  });
+})();
+
+const regionSelect = document.querySelector(".header__element1");
 if (regionSelect) {
-  regionSelect.addEventListener('click', (e) => {
-    const regionDropdown = document.querySelector('.region-select-dropdown');
-    if (regionDropdown.classList.contains('hide')) {
-      regionDropdown.classList.remove('hide');
-      regionDropdown.classList.add('smoothShow');
+  regionSelect.addEventListener("click", e => {
+    const regionDropdown = document.querySelector(".region-select-dropdown");
+    if (regionDropdown.classList.contains("hide")) {
+      regionDropdown.classList.remove("hide");
+      regionDropdown.classList.add("smoothShow");
     } else {
-      regionDropdown.classList.add('hide');
-      regionDropdown.classList.remove('smoothShow');
+      regionDropdown.classList.add("hide");
+      regionDropdown.classList.remove("smoothShow");
     }
-    if (e.target.nodeName == 'LI') {
+    if (e.target.nodeName == "LI") {
       for (i = 0; i < regionSelect.children.length; i++) {
-        if (regionSelect.children[i].nodeName == 'SPAN') {
-
+        if (regionSelect.children[i].nodeName == "SPAN") {
           let regionCurrent = regionSelect.children[i].innerHTML;
           regionSelect.children[i].innerHTML = e.target.innerHTML;
           e.target.innerHTML = regionCurrent;
         }
       }
     }
-  })
+  });
 }
-
 
 // animationSlide('left', '.about__img');
 // animationSlide('right', '.about__grid');
 // animationSlide("right", ".about__why__h3");
 Tu.tScroll({
-  't-element': '.about__why__h3',
-  't-position': 200,
-  't-animate': 'slideRight'
+  "t-element": ".about__why__h3",
+  "t-position": 200,
+  "t-animate": "slideRight"
   // 'data-t-show': 3
-})
+});
 Tu.tScroll({
-  't-element': '.about__img',
-  't-position': 200,
-  't-animate': 'slideLeft'
-})
+  "t-element": ".about__img",
+  "t-position": 200,
+  "t-animate": "slideLeft"
+});
 Tu.tScroll({
-  't-element': '.about__grid',
-  't-position': 200,
-  't-animate': 'slideRight'
-})
+  "t-element": ".about__grid",
+  "t-position": 200,
+  "t-animate": "slideRight"
+});
 Tu.tScroll({
-  't-element': '.about__1 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .5
-})
+  "t-element": ".about__1 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.5
+});
 Tu.tScroll({
-  't-element': '.about__2 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .4
-})
+  "t-element": ".about__2 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.4
+});
 Tu.tScroll({
-  't-element': '.about__3 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .3
-})
+  "t-element": ".about__3 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.3
+});
 Tu.tScroll({
-  't-element': '.about__4 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .5
-})
+  "t-element": ".about__4 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.5
+});
 Tu.tScroll({
-  't-element': '.about__5 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .4
-})
+  "t-element": ".about__5 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.4
+});
 Tu.tScroll({
-  't-element': '.about__6 h3',
-  't-position': 200,
-  't-animate': 'zoomOut',
-  't-delay': .3
-})
+  "t-element": ".about__6 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.3
+});
 Tu.tScroll({
-  't-element': '.catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1',
-  't-position': 200,
-  't-animate': 'slideLeft'
-})
+  "t-element":
+    ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
+  "t-position": 200,
+  "t-animate": "slideLeft"
+});
 Tu.tScroll({
-  't-element': '.catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image',
-  't-position': 200,
-  't-animate': 'slideRight'
-})
-
+  "t-element":
+    ".catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image",
+  "t-position": 200,
+  "t-animate": "slideRight"
+});
 
 document.querySelector(".header__element").addEventListener("click", () => {
   window.location.href = "./main.html";
