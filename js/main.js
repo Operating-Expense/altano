@@ -401,10 +401,13 @@ if (prodTabs) {
 const formReserve = document.querySelector(".reserve-date");
 if (formReserve) {
   var date = new Date();
+
   var mm = date.getMonth() + 1;
   mm < 10 ? (mm = "0" + mm) : mm;
+
   var dd = date.getDate();
   dd < 10 ? (dd = "0" + dd) : dd;
+
   var yy = date.getFullYear();
   formReserve["date"].value = `${yy}-${mm}-${dd}`;
   formReserve.addEventListener("submit", e => {
@@ -431,13 +434,13 @@ function popUpThx() {
 if (document.querySelector(".show__filters__768")) {
   document.querySelector(".show__filters__768").addEventListener("click", e => {
     const sideFilter = document.querySelector(".filters-side-menu");
-    if (sideFilter.classList.contains("show")) {
-      sideFilter.classList.remove("show");
-    } else {
-      sideFilter.classList.add("show");
-    }
+
+    sideFilter.classList.contains("show")
+      ? sideFilter.classList.remove("show")
+      : sideFilter.classList.add("show");
   });
 }
+
 const sortBtn = document.querySelector(".sort-button");
 if (sortBtn) {
   sortBtn.addEventListener("click", e => {
