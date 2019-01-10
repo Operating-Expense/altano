@@ -27,26 +27,22 @@ document.addEventListener("click", e => {
 const sliders = {
   slide1: {
     img: "head.jpg",
-    title:
-      "<h2>Mebel</h2><h2>Mebel Furniture</h2><p>Exelent choise for home comfort</p>",
+    title: "<h2>Mebel</h2><h2>Mebel Furniture</h2><p>Exelent choise for home comfort</p>",
     preview: "slide1_preview.jpg"
   },
   slide2: {
     img: "slide2.jpg",
-    title:
-      "<h2>Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
+    title: "<h2>Winter</h2><h2>Winter Furniture</h2><p>Exelent choise for home comfort in Winter</p>",
     preview: "slide2_preview.jpg"
   },
   slide3: {
     img: "head.jpg",
-    title:
-      "<h2>Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
+    title: "<h2>Summer</h2><h2>Sum Furniture</h2><p>Exelent choise for home comfort in Summer</p>",
     preview: "slide1_preview.jpg"
   },
   slide4: {
     img: "slide2.jpg",
-    title:
-      "<h2>Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
+    title: "<h2>Autumn</h2><h2>Autu Furniture</h2><p>Exelent choise for home comfort in Autumn</p>",
     preview: "slide2_preview.jpg"
   }
 };
@@ -263,7 +259,6 @@ document.addEventListener("click", e => {
       const title = e.target.parentNode.children[1].innerHTML;
       const price = e.target.parentNode.children[3].innerHTML;
       this.priceNum = parseInt(price.replace(/\s/g, ""));
-      //window.localStorage.setItem(`${id}`, `${img};${title};${priceNum}`);
 
       addToCart(id, priceNum, title, img);
       moveAnimation(e.target.parentNode);
@@ -275,9 +270,6 @@ document.addEventListener("click", e => {
     } else {
       if (items.children.length > 0) {
         cartDropDown.classList.add("cart-show");
-        /*  for (i = 0; i < window.localStorage.length; i++) {
-                     console.log(window.localStorage.getItem[i]);
-                 } */
       }
     }
   }
@@ -285,13 +277,6 @@ document.addEventListener("click", e => {
     cartRemoveItem(e.target.parentNode);
   }
 });
-/* for (key in window.localStorage) {
-    if (typeof (window.localStorage[key]) == "string") {
-        //console.log(window.localStorage[key]);
-        console.log(window.localStorage[key].split(";")[1]);
-    }
-
-} */
 
 function moveAnimation(elem) {
   const newR = document.createElement("div");
@@ -352,12 +337,7 @@ function counterCart(num) {
 
 const cartCounter = document.querySelector(".cart-items-count");
 
-/* if (window.localStorage.length >= 1) {
-    cartCounter.classList.remove('hide');
-    cartCounter.innerHTML = window.localStorage.length;
-} */
 const totalPriceBlock = document.querySelector(".cart-total__price span");
-//console.log(totalPriceBlock.innerHTML);
 
 function totalPrice(plusPrice) {
   const oldPrice = totalPriceBlock.innerHTML;
@@ -374,21 +354,17 @@ function cartRemoveItem(blockToRemove) {
 }
 const prodTabs = document.querySelector(".choose__wtd");
 
-//console.log(prodTabs.nextElementSibling.children.length);
-
 if (prodTabs) {
   prodTabs.addEventListener("click", e => {
     if (e.target.tagName == "A") {
       e.preventDefault();
       for (i = 0; i < prodTabs.children.length; i++) {
-        if (
-          prodTabs.nextElementSibling.children[i].classList.contains("show")
-        ) {
-          prodTabs.nextElementSibling.children[i].classList.remove("show");
-        }
         if (prodTabs.children[i] == e.target.parentNode) {
-          prodTabs.nextElementSibling.children[i].classList.add("show");
+          prodTabs.nextElementSibling.children[i].classList.remove("hide");
+        } else {
+          prodTabs.nextElementSibling.children[i].classList.add("hide");
         }
+
         if (prodTabs.children[i].classList.contains("choose-tab")) {
           prodTabs.children[i].classList.remove("choose-tab");
         }
@@ -401,15 +377,14 @@ if (prodTabs) {
 const formReserve = document.querySelector(".reserve-date");
 if (formReserve) {
   var date = new Date();
-
   var mm = date.getMonth() + 1;
-  mm < 10 ? (mm = "0" + mm) : mm;
+  mm < 10 ? mm = "0" + mm : null;
 
   var dd = date.getDate();
-  dd < 10 ? (dd = "0" + dd) : dd;
-
+  dd < 10 ? dd = "0" + dd : null;
   var yy = date.getFullYear();
   formReserve["date"].value = `${yy}-${mm}-${dd}`;
+
   formReserve.addEventListener("submit", e => {
     e.preventDefault();
     if (e.target["tel"].value != "" && e.target["tel"].value.length > 6) {
@@ -434,29 +409,11 @@ function popUpThx() {
 if (document.querySelector(".show__filters__768")) {
   document.querySelector(".show__filters__768").addEventListener("click", e => {
     const sideFilter = document.querySelector(".filters-side-menu");
-
-    sideFilter.classList.contains("show")
-      ? sideFilter.classList.remove("show")
-      : sideFilter.classList.add("show");
-  });
-}
-
-const sortBtn = document.querySelector(".sort-button");
-if (sortBtn) {
-  sortBtn.addEventListener("click", e => {
-    const sortDropdown = document.querySelector(".sort-dropdown");
-    const sortTitle = document.querySelector(".sort-button span");
-
-    sortDropdown.classList.contains("hide")
-      ? sortDropdown.classList.remove("hide")
-      : sortDropdown.classList.add("hide");
-
-    sortDropdown.addEventListener("click", e => {
-      if (e.target.nodeName == "LI") {
-        sortTitle.innerHTML = e.target.innerHTML;
-        sortDropdown.classList.add("hide");
-      }
-    });
+    if (sideFilter.classList.contains("show")) {
+      sideFilter.classList.remove("show");
+    } else {
+      sideFilter.classList.add("show");
+    }
   });
 }
 
@@ -483,12 +440,10 @@ function animationSlide(pos, elem) {
   document.addEventListener("scroll", () => {
     if (blockPosition <= window.pageYOffset) {
       block.classList.add("anim-end");
-      // console.log(blockPosition + " block pos");
-      // console.log(window.pageYOffset + " windows offset");
     }
   });
 }
-(function() {
+(function () {
   const rangeInput = document.querySelector(".input-range");
   if (rangeInput) {
     const rangeValueMin = document.querySelector(
@@ -498,20 +453,14 @@ function animationSlide(pos, elem) {
     const rangeValueMax = document.querySelector(
       ".input-range__value div:last-child"
     );
-    rangeInput.children[0].addEventListener("input", function() {
+    rangeInput.children[0].addEventListener("input", function () {
       const rangeInputMin = rangeInput.children[0].value;
-      rangeValueMin.setAttribute(
-        "style",
-        `left: calc(${rangeInputMin}% - 12px)`
-      );
+      rangeValueMin.setAttribute("style", `left: calc(${rangeInputMin}% - 12px)`);
       rangeValueMin.innerHTML = rangeInputMin;
     });
-    rangeInput.children[1].addEventListener("input", function() {
+    rangeInput.children[1].addEventListener("input", function () {
       const rangeInputMax = rangeInput.children[1].value;
-      rangeValueMax.setAttribute(
-        "style",
-        `left: calc(${rangeInputMax}% - 12px)`
-      );
+      rangeValueMax.setAttribute("style", `left: calc(${rangeInputMax}% - 12px)`);
       rangeValueMax.innerHTML = rangeInputMax;
     });
   }
@@ -540,9 +489,6 @@ if (regionSelect) {
   });
 }
 
-// animationSlide('left', '.about__img');
-// animationSlide('right', '.about__grid');
-// animationSlide("right", ".about__why__h3");
 Tu.tScroll({
   "t-element": ".about__why__h3",
   "t-position": 200,
@@ -596,14 +542,12 @@ Tu.tScroll({
   "t-delay": 0.3
 });
 Tu.tScroll({
-  "t-element":
-    ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
+  "t-element": ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
   "t-position": 200,
   "t-animate": "slideLeft"
 });
 Tu.tScroll({
-  "t-element":
-    ".catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image",
+  "t-element": ".catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image",
   "t-position": 200,
   "t-animate": "slideRight"
 });
