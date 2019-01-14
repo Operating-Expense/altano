@@ -443,18 +443,18 @@ function animationSlide(pos, elem) {
     }
   });
 }
-(function() {
+(function () {
   const rangeInput = document.querySelector(".input-range");
   if (rangeInput) {
     const rangeValueMin = document.querySelector(".input-range__value div:first-child");
 
     const rangeValueMax = document.querySelector(".input-range__value div:last-child");
-    rangeInput.children[0].addEventListener("input", function() {
+    rangeInput.children[0].addEventListener("input", function () {
       const rangeInputMin = rangeInput.children[0].value;
       rangeValueMin.setAttribute("style", `left: calc(${rangeInputMin}% - 12px)`);
       rangeValueMin.innerHTML = rangeInputMin;
     });
-    rangeInput.children[1].addEventListener("input", function() {
+    rangeInput.children[1].addEventListener("input", function () {
       const rangeInputMax = rangeInput.children[1].value;
       rangeValueMax.setAttribute("style", `left: calc(${rangeInputMax}% - 12px)`);
       rangeValueMax.innerHTML = rangeInputMax;
@@ -490,68 +490,122 @@ function regionDropDown(parent) {
     });
   }
 }
+
+function thxPopUp(text) {
+  const popUp = document.createElement('div');
+  popUp.classList.add('popup-overlay');
+  popUp.innerHTML = `<div class="thx-popup"><h2>Спасибо за ваш заказ</h2>
+  <p>${text}</p></div>`;
+
+  document.body.appendChild(popUp).animate([{
+      opacity: '0'
+    },
+    {
+      opacity: '1'
+    }
+  ], {
+    duration: 1000
+  });
+
+  popUp.addEventListener('click', () => {
+    popUp.animate([{
+      opacity: '1'
+    }, {
+      opacity: '0'
+    }], {
+      duration: 1000
+    });
+    setTimeout(() => {
+      popUp.parentNode.removeChild(popUp);
+    }, 1003);
+
+  })
+}
+const orderBtn = document.querySelector('.order-button');
+if (orderBtn) {
+  orderBtn.addEventListener('click', e => {
+    e.preventDefault();
+    thxPopUp('В течении 30 минут с Вами свяжется наш менеджер и обсудит условия заказа !');
+  })
+}
+
+//Click on product item(on any part of block exept to cart button) go to link url
+// const allProductsLink = document.querySelectorAll('.catalog__group__box');
+// if (allProductsLink.length) {
+//   for (i = 0; i < allProductsLink.length; i++) {
+//     if (allProductsLink[i].children[0].href) {
+//       const url = allProductsLink[i].children[0].href;
+
+//       allProductsLink[i].addEventListener('click', () => {
+//         window.location.href = url;
+//       })
+//     }
+//   }
+// }
+
 regionDropDown(".header__element1");
 regionDropDown(".dropdown-menu__city");
 
+// Tu.tScroll({
+//   "t-element": ".about__why__h3",
+//   "t-position": 200,
+//   "t-animate": "slideRight"
+//   // 'data-t-show': 3
+// });
+// Tu.tScroll({
+//   "t-element": ".about__img",
+//   "t-position": 200,
+//   "t-animate": "slideLeft"
+// });
+// Tu.tScroll({
+//   "t-element": ".about__grid",
+//   "t-position": 200,
+//   "t-animate": "slideRight"
+// });
+// Tu.tScroll({
+//   "t-element": ".about__1 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.5
+// });
+// Tu.tScroll({
+//   "t-element": ".about__2 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.4
+// });
+// Tu.tScroll({
+//   "t-element": ".about__3 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.3
+// });
+// Tu.tScroll({
+//   "t-element": ".about__4 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.5
+// });
+// Tu.tScroll({
+//   "t-element": ".about__5 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.4
+// });
+// Tu.tScroll({
+//   "t-element": ".about__6 h3",
+//   "t-position": 200,
+//   "t-animate": "zoomOut",
+//   "t-delay": 0.3
+// });
+// Tu.tScroll({
+//   "t-element": ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
+//   "t-position": 200,
+//   "t-animate": "slideLeft"
+// });
+//.catalogue__relax__image
 Tu.tScroll({
-  "t-element": ".about__why__h3",
-  "t-position": 200,
-  "t-animate": "slideRight"
-  // 'data-t-show': 3
-});
-Tu.tScroll({
-  "t-element": ".about__img",
-  "t-position": 200,
-  "t-animate": "slideLeft"
-});
-Tu.tScroll({
-  "t-element": ".about__grid",
-  "t-position": 200,
-  "t-animate": "slideRight"
-});
-Tu.tScroll({
-  "t-element": ".about__1 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.5
-});
-Tu.tScroll({
-  "t-element": ".about__2 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.4
-});
-Tu.tScroll({
-  "t-element": ".about__3 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.3
-});
-Tu.tScroll({
-  "t-element": ".about__4 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.5
-});
-Tu.tScroll({
-  "t-element": ".about__5 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.4
-});
-Tu.tScroll({
-  "t-element": ".about__6 h3",
-  "t-position": 200,
-  "t-animate": "zoomOut",
-  "t-delay": 0.3
-});
-Tu.tScroll({
-  "t-element": ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
-  "t-position": 200,
-  "t-animate": "slideLeft"
-});
-Tu.tScroll({
-  "t-element": ".catalogue__relax__image,.balcony__gr2,.horeca__image,.umbrella__image,.sale__gr2,.ready__image",
+  "t-element": ".catalogue__relax__image,.horeca__image,.umbrella__image,.ready__image",
   "t-position": 200,
   "t-animate": "slideRight"
 });
