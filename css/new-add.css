@@ -21,8 +21,7 @@ body {
   -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: -webkit-transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .header__naming h2:nth-child(1) {
@@ -132,6 +131,7 @@ body {
 
 .dropdown-menu__city {
   margin: 0 50px;
+  position: relative;
 }
 
 .dropdown-menu__header {
@@ -262,25 +262,25 @@ body {
   z-index: 3;
 }
 
-.pointer__key>img {
+.pointer__key > img {
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.pointer__key:hover>img {
+.pointer__key:hover > img {
   opacity: 1;
 }
 
 .pointer-tip {
-  display: none;
+  /* display: none; */
   position: absolute;
   z-index: 3;
   bottom: 60px;
   left: 55px;
   box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .tip-show {
@@ -410,7 +410,7 @@ body {
   align-items: center;
 }
 
-.cart-control__quanity>* {
+.cart-control__quanity > * {
   border: 1px solid #000;
 }
 
@@ -538,7 +538,6 @@ body {
 }
 
 @media screen and (max-width: 1280px) {
-
   .dropdown-search,
   .dropdown-menu {
     padding-left: 10px;
@@ -547,7 +546,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-
   .dropdown-menu__categories,
   .dropdown-menu__links {
     width: 100%;
@@ -559,7 +557,6 @@ body {
 }
 
 @media screen and (max-width: 620px) {
-
   .dropdown-menu__categories,
   .dropdown-menu__links {
     justify-content: center;
@@ -571,7 +568,7 @@ body {
     margin-bottom: 10px;
   }
 
-  .dropdown-menu__header>* {
+  .dropdown-menu__header > * {
     margin-bottom: 10px;
     text-align: center;
   }
@@ -687,8 +684,13 @@ a,
 .footer .footer__flex ul li a:hover,
 a:hover {
   color: #696969;
+  text-decoration: underline;
 }
-
+.dropdown-menu__links li a:hover {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+}
 .ready__href,
 .accessories__href,
 .umbrella__href,
@@ -720,9 +722,7 @@ a:hover {
 .catalogue__dinner__href img {
   margin-left: 25px;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-
 }
-
 
 .catalog .catalog__group .catalog__group__box a:hover,
 .header__button:hover {
@@ -754,8 +754,6 @@ a:hover {
   transform: translateX(0);
 }
 
-
-
 .arrow-catalog {
   display: inline-block;
   position: relative;
@@ -768,7 +766,11 @@ a:hover {
   text-transform: uppercase;
 }
 
+.arrow-catalog:hover {
+  color: #fff;
+}
 .arrow-catalog span {
+  text-shadow: 1px 1px 10px #000;
   position: absolute;
   top: calc(50% - 8px);
   line-height: 16px;
@@ -809,12 +811,12 @@ a:hover {
 }
 
 .catalog .catalog__group .catalog__group__box {
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .catalog .catalog__group .catalog__group__box:hover {
   transform: scale(1.04);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
 
@@ -921,7 +923,6 @@ a:hover {
   100% {
     opacity: 1;
   }
-
 }
 
 .catalog .catalog__group .catalog__group__box a.product-link {
@@ -937,7 +938,7 @@ a:hover {
 }
 
 .main .main__wp .wp__text a {
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .main .main__wp .wp__text a:hover {
@@ -959,7 +960,7 @@ a:hover {
 }
 
 .mobile-footer li {
-  width: 50px;
+  width: 35px;
   cursor: pointer;
 }
 
