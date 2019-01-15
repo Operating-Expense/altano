@@ -1,11 +1,26 @@
+//slider simple
+class Slider {
+  constructor(mainBlock, prev, next) {
+    this.mainBlock = mainBlock;
+    this.prev = prev;
+    this.next = next;
+  }
+
+  slideNext() {
+    this.btnNext = document.querySelector(this.next);
+    this.btnNext.onclick = function() {
+      console.log("next");
+    };
+  }
+}
+let sliderMain = new Slider("", "", ".crsl__right");
+sliderMain.slideNext();
+
+//in process
 function closeDropDown(notThis) {
   const allDropDowns = document.querySelectorAll(".dropdown");
-
   for (i = 0; i < allDropDowns.length; i++) {
-    // console.log(notThis);
-    // if (allDropDowns[i] != notThis) {
     allDropDowns[i].classList.add("hide");
-    // }
   }
 }
 
@@ -443,18 +458,18 @@ function animationSlide(pos, elem) {
     }
   });
 }
-(function () {
+(function() {
   const rangeInput = document.querySelector(".input-range");
   if (rangeInput) {
     const rangeValueMin = document.querySelector(".input-range__value div:first-child");
 
     const rangeValueMax = document.querySelector(".input-range__value div:last-child");
-    rangeInput.children[0].addEventListener("input", function () {
+    rangeInput.children[0].addEventListener("input", function() {
       const rangeInputMin = rangeInput.children[0].value;
       rangeValueMin.setAttribute("style", `left: calc(${rangeInputMin}% - 12px)`);
       rangeValueMin.innerHTML = rangeInputMin;
     });
-    rangeInput.children[1].addEventListener("input", function () {
+    rangeInput.children[1].addEventListener("input", function() {
       const rangeInputMax = rangeInput.children[1].value;
       rangeValueMax.setAttribute("style", `left: calc(${rangeInputMax}% - 12px)`);
       rangeValueMax.innerHTML = rangeInputMax;
@@ -492,41 +507,50 @@ function regionDropDown(parent) {
 }
 
 function thxPopUp(text) {
-  const popUp = document.createElement('div');
-  popUp.classList.add('popup-overlay');
+  const popUp = document.createElement("div");
+  popUp.classList.add("popup-overlay");
   popUp.innerHTML = `<div class="thx-popup"><h2>Спасибо за ваш заказ</h2>
   <p>${text}</p></div>`;
 
-  document.body.appendChild(popUp).animate([{
-      opacity: '0'
-    },
+  document.body.appendChild(popUp).animate(
+    [
+      {
+        opacity: "0"
+      },
+      {
+        opacity: "1"
+      }
+    ],
     {
-      opacity: '1'
-    }
-  ], {
-    duration: 1000
-  });
-
-  popUp.addEventListener('click', () => {
-    popUp.animate([{
-      opacity: '1'
-    }, {
-      opacity: '0'
-    }], {
       duration: 1000
-    });
+    }
+  );
+
+  popUp.addEventListener("click", () => {
+    popUp.animate(
+      [
+        {
+          opacity: "1"
+        },
+        {
+          opacity: "0"
+        }
+      ],
+      {
+        duration: 1000
+      }
+    );
     setTimeout(() => {
       popUp.parentNode.removeChild(popUp);
     }, 1003);
-
-  })
+  });
 }
-const orderBtn = document.querySelector('.order-button');
+const orderBtn = document.querySelector(".order-button");
 if (orderBtn) {
-  orderBtn.addEventListener('click', e => {
+  orderBtn.addEventListener("click", e => {
     e.preventDefault();
-    thxPopUp('В течении 30 минут с Вами свяжется наш менеджер и обсудит условия заказа !');
-  })
+    thxPopUp("В течении 30 минут с Вами свяжется наш менеджер и обсудит условия заказа !");
+  });
 }
 
 //Click on product item(on any part of block exept to cart button) go to link url
