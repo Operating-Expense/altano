@@ -1,20 +1,30 @@
-//slider simple
+//slider simple - mainblock id, innerBlock class, ctrkLeft, ctrlRight
 class Slider {
-  constructor(mainBlock, prev, next) {
-    this.mainBlock = mainBlock;
-    this.prev = prev;
-    this.next = next;
+  constructor(sliderId) {
+    this.sliderId = sliderId;
   }
 
   slideNext() {
-    this.btnNext = document.querySelector(this.next);
-    this.btnNext.onclick = function() {
-      console.log("next");
+    this.slider = document.querySelector(this.sliderId);
+    this.slider.onclick = function(e) {
+      console.dir(e.target);
     };
   }
 }
-let sliderMain = new Slider("", "", ".crsl__right");
-sliderMain.slideNext();
+let sliderMain = new Slider("#news-slider");
+
+function newsSlider() {
+  const mainBlock = document.querySelector("#news-slider");
+  if (mainBlock) {
+    mainBlock.addEventListener("click", e => {
+      console.log(e.target);
+      if (e.target.classList.contains("crsl__main")) {
+        console.log(e.target.children.length);
+      }
+    });
+  }
+}
+newsSlider();
 
 //in process
 function closeDropDown(notThis) {
