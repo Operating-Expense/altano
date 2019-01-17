@@ -82,7 +82,20 @@ function productSlider(sliderId) {
   }
 }
 productSlider("#product-slider");
-
+//sort dropdown
+const sortDropDown = document.querySelector(".sort-dropdown");
+const sortDropDownBtn = document.querySelector(".sort-dropdown-btn");
+if (sortDropDownBtn) {
+  sortDropDownBtn.addEventListener("click", () => {
+    sortDropDown.classList.contains("show") ? sortDropDown.classList.remove("show") : sortDropDown.classList.add("show");
+  });
+  sortDropDown.addEventListener("click", e => {
+    if (e.target.nodeName == "LI") {
+      sortDropDownBtn.innerHTML = e.target.innerHTML;
+      sortDropDown.classList.remove("show");
+    }
+  });
+}
 //color schema
 const colorsAll = document.querySelectorAll(".color-schema");
 if (colorsAll.length) {
