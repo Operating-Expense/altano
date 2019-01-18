@@ -1239,6 +1239,22 @@ a:hover {
   padding: 0;
   top: calc(50% - 3px);
 }
+.catalogue__balcony .balcony__gr1 h3 a,
+.catalogue__balcony .balcony__gr2 h3 a,
+.catalogue__sale .sale__gr2 h3 a,
+.catalogue__sale .sale__gr1 h3 a {
+  position: static;
+  color: #fff;
+}
+.arrow-move {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.balcony__gr1:hover .arrow-move,
+.balcony__gr2:hover .arrow-move,
+.sale__gr2:hover .arrow-move,
+.sale__gr1:hover .arrow-move {
+  right: 30px;
+}
 @keyframes page-counter {
   0% {
     transform: scale(1);

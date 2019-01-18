@@ -662,58 +662,58 @@ if (orderBtn) {
 regionDropDown(".header__element1");
 regionDropDown(".dropdown-menu__city");
 
-// Tu.tScroll({
-//   "t-element": ".about__why__h3",
-//   "t-position": 200,
-//   "t-animate": "slideRight"
-//   // 'data-t-show': 3
-// });
-// Tu.tScroll({
-//   "t-element": ".about__img",
-//   "t-position": 200,
-//   "t-animate": "slideLeft"
-// });
-// Tu.tScroll({
-//   "t-element": ".about__grid",
-//   "t-position": 200,
-//   "t-animate": "slideRight"
-// });
-// Tu.tScroll({
-//   "t-element": ".about__1 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.5
-// });
-// Tu.tScroll({
-//   "t-element": ".about__2 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.4
-// });
-// Tu.tScroll({
-//   "t-element": ".about__3 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.3
-// });
-// Tu.tScroll({
-//   "t-element": ".about__4 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.5
-// });
-// Tu.tScroll({
-//   "t-element": ".about__5 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.4
-// });
-// Tu.tScroll({
-//   "t-element": ".about__6 h3",
-//   "t-position": 200,
-//   "t-animate": "zoomOut",
-//   "t-delay": 0.3
-// });
+Tu.tScroll({
+  "t-element": ".about__why__h3",
+  "t-position": 200,
+  "t-animate": "slideRight"
+  // 'data-t-show': 3
+});
+Tu.tScroll({
+  "t-element": ".about__img",
+  "t-position": 200,
+  "t-animate": "slideLeft"
+});
+Tu.tScroll({
+  "t-element": ".about__grid",
+  "t-position": 200,
+  "t-animate": "slideRight"
+});
+Tu.tScroll({
+  "t-element": ".about__1 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.5
+});
+Tu.tScroll({
+  "t-element": ".about__2 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.4
+});
+Tu.tScroll({
+  "t-element": ".about__3 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.3
+});
+Tu.tScroll({
+  "t-element": ".about__4 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.5
+});
+Tu.tScroll({
+  "t-element": ".about__5 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.4
+});
+Tu.tScroll({
+  "t-element": ".about__6 h3",
+  "t-position": 200,
+  "t-animate": "zoomOut",
+  "t-delay": 0.3
+});
 // Tu.tScroll({
 //   "t-element": ".catalogue__naming h3,.balcony__gr1,.catalogue__dinner__image,.swing__image,.accessories__image,.sale__gr1",
 //   "t-position": 200,
