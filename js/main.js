@@ -244,10 +244,56 @@ if (sliderCtr) {
     }, 4);
   }
 }
+
+//partner slider v2--------------
+const partnerSlider = document.querySelector(".partners__circle");
+
+if (partnerSlider) {
+  const sliderPrev = partnerSlider.querySelector(".partners-ctrl-left");
+  const sliderNext = partnerSlider.querySelector(".partners-ctrl-right");
+  let slides = partnerSlider.querySelectorAll(".circle__flex a");
+  let slidesTotal = slides.length - 1;
+
+  partnerSlider.addEventListener("click", e => {
+    if (e.target == sliderNext) {
+      slideMove("next");
+    }
+    if (e.target == sliderPrev) {
+      slideMove("prev");
+    }
+  });
+
+  function slideMove(direction) {
+    slides = partnerSlider.querySelectorAll(".circle__flex a");
+    if (direction == "next") {
+      clearInterval(partnersSliderInterval);
+      slides[0].setAttribute("style", `margin-left: -185px`);
+      setTimeout(() => {
+        slides[0].parentNode.appendChild(slides[0]);
+        slides[0].removeAttribute("style");
+      }, 1001);
+    }
+    if (direction == "prev") {
+      clearInterval(partnersSliderInterval);
+
+      slides[0].parentNode.prepend(slides[slidesTotal]);
+      slides[slidesTotal].setAttribute("style", `margin-left: -185px`);
+      setTimeout(() => {
+        slides[slidesTotal].removeAttribute("style");
+      }, 40);
+    }
+  }
+
+  const partnersSliderInterval = setInterval(() => {
+    slideMove("next");
+  }, 2000);
+}
+//partner slider v2 END----------
+
 //---partners slider ---
 const partnersCtrl = document.querySelector(".partners__control");
 
-if (partnersCtrl) {
+if (!partnersCtrl) {
   //    transform: translateX(-200px)
   const partnerBlock = document.querySelector(".partners__circle");
   const ctrlLeft = document.querySelector(".partners-ctrl-left");

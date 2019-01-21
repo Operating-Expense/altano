@@ -233,8 +233,9 @@ body {
 .partners__control {
   position: absolute;
   top: calc(50% - 10px);
-  width: 100%;
+  width: 94%;
   z-index: 2;
+  left: 3%;
 }
 
 .partners-ctrl-left,
@@ -247,11 +248,14 @@ body {
 }
 
 .partners__circle .circle__flex {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
   grid-column-start: 2;
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   transition: all 0.87s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -260,6 +264,7 @@ body {
   width: 170px;
   margin: 0 15px;
   z-index: 3;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .pointer__key > img {
