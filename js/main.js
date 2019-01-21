@@ -82,10 +82,15 @@ function productSlider(sliderId) {
   }
 }
 productSlider("#product-slider");
+
 //sort dropdown
 const sortDropDown = document.querySelector(".sort-dropdown");
 const sortDropDownBtn = document.querySelector(".sort-dropdown-btn");
+const sortDropDownBtnArrow = document.querySelector(".filter-block img");
 if (sortDropDownBtn) {
+  sortDropDownBtnArrow.addEventListener("click", () => {
+    sortDropDown.classList.contains("show") ? sortDropDown.classList.remove("show") : sortDropDown.classList.add("show");
+  });
   sortDropDownBtn.addEventListener("click", () => {
     sortDropDown.classList.contains("show") ? sortDropDown.classList.remove("show") : sortDropDown.classList.add("show");
   });
@@ -355,6 +360,7 @@ function validateEmail(email) {
 
 // ADD to cart
 const cartButtonTop = document.querySelector(".header-cart");
+// const cartCounter = document.querySelector(".cart-items-count");
 const cartDropDown = document.querySelector(".cart-dropdown");
 
 document.addEventListener("click", e => {
@@ -371,7 +377,7 @@ document.addEventListener("click", e => {
       moveAnimation(e.target.parentNode);
       totalPrice(priceNum);
     }
-  if (e.target.classList.contains("header-cart")) {
+  if (e.target.classList.contains("header-cart") || e.target == cartCounter) {
     if (cartDropDown.classList.contains("cart-show")) {
       cartDropDown.classList.remove("cart-show");
     } else {
