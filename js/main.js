@@ -289,8 +289,7 @@ if (partnerSlider) {
 //partner slider v2 END----------
 
 //---partners slider ---
-const partnersCtrl = document.querySelector(".partners__control");
-//console.log(partnersCtrl);
+const partnersCtrl = document.querySelector(".partners__control1111");
 if (partnersCtrl) {
   //    transform: translateX(-200px)
   const partnerBlock = document.querySelector(".partners__circle");
