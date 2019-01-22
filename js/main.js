@@ -255,6 +255,7 @@ if (partnerSlider) {
   let slidesTotal = slides.length - 1;
 
   partnerSlider.addEventListener("click", e => {
+    clearInterval(partnersSliderInterval);
     if (e.target == sliderNext) {
       slideMove("next");
     }
@@ -266,7 +267,6 @@ if (partnerSlider) {
   function slideMove(direction) {
     slides = partnerSlider.querySelectorAll(".circle__flex a");
     if (direction == "next") {
-      clearInterval(partnersSliderInterval);
       slides[0].setAttribute("style", `margin-left: -185px`);
       setTimeout(() => {
         slides[0].parentNode.appendChild(slides[0]);
@@ -274,8 +274,6 @@ if (partnerSlider) {
       }, 1001);
     }
     if (direction == "prev") {
-      clearInterval(partnersSliderInterval);
-
       slides[0].parentNode.prepend(slides[slidesTotal]);
       slides[slidesTotal].setAttribute("style", `margin-left: -185px`);
       setTimeout(() => {
