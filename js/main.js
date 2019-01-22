@@ -290,8 +290,8 @@ if (partnerSlider) {
 
 //---partners slider ---
 const partnersCtrl = document.querySelector(".partners__control");
-
-if (!partnersCtrl) {
+//console.log(partnersCtrl);
+if (partnersCtrl) {
   //    transform: translateX(-200px)
   const partnerBlock = document.querySelector(".partners__circle");
   const ctrlLeft = document.querySelector(".partners-ctrl-left");
