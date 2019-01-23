@@ -312,12 +312,10 @@ class sliderC extends SliderP {
 
     this.slideMove = {
       next: () => {
-        console.log("next New");
         this.slideMoveNext(0);
         this.slideMoveNext(1);
       },
       prev: () => {
-        console.log("Prev New");
         this.slideMovePrev(this.galleryLength);
         this.slideMovePrev(this.galleryLength - 1);
       }
@@ -818,6 +816,15 @@ Tu.tScroll({
   "t-position": 200,
   "t-animate": "slideRight"
 });
+//mainpage div on click go to url... I know... I know... >_<
+const divA = document.querySelectorAll(".div-a");
+if (divA) {
+  for (i = 0; i < divA.length; i++) {
+    divA[i].onclick = function(e) {
+      window.location = e.target.dataset.url;
+    };
+  }
+}
 
 document.querySelector(".header__element").addEventListener("click", () => {
   window.location.href = "./main.html";

@@ -1417,7 +1417,9 @@ a:hover {
   margin: 0;
   padding: 0;
 }
-
+.div-a {
+  cursor: pointer;
+}
 @media (max-width: 1278px) and (min-width: 767px) {
   .catalog .catalog__group .catalog__group__box a.product-link {
     width: auto;
