@@ -626,7 +626,28 @@ body {
     transform: scale(0.6) translate3d(1200px, -1500px, 0) rotate3d(1, 1, 1, 45deg);
   }
 }
-
+.umbrella .socialbuttons .sociabuttons__and {
+  width: 102px;
+}
+.scroll-tabs {
+  overflow: scroll;
+}
+#catalog-brands .partners__control {
+  width: 100%;
+  left: 0;
+}
+#catalog-brands {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+}
+.catalog-brands {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
 @media screen and (max-width: 1280px) {
   .dropdown-search,
   .dropdown-menu {
@@ -805,13 +826,13 @@ a,
 .footer .footer__flex ul li a:hover,
 a:hover {
   color: #696969;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .dropdown-menu__links li a:hover {
   color: #000;
   /* font-weight: 600; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .ready__href,
@@ -1420,10 +1441,16 @@ a:hover {
     display: block;
   }
 
-  .intrend .intrend__flex a {
+  .intrend .intrend__flex img {
+    width: auto;
+  }
+  .catalog-brands {
+    overflow: hidden;
+  }
+  /* .intrend .intrend__flex a {
     width: 30%;
     margin: 20px 1%;
-  }
+  } */
 
   .choose .choose__characteristic,
   .choose .choose__pay,
@@ -1458,8 +1485,18 @@ a:hover {
     margin-right: 5px;
   }
 }
-
+.only-sm {
+  display: none;
+}
+.only-lg {
+}
 @media (max-width: 375px) {
+  .only-sm {
+    display: block;
+  }
+  .only-lg {
+    display: none;
+  }
   .slider-prev {
     bottom: -300px;
   }

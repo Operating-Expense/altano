@@ -244,49 +244,93 @@ if (sliderCtr) {
     }, 4);
   }
 }
+//class of brands slider START. Select mainBlock of slider and add it like prop to class, ctrl must contain main class ".sliderP__ctrl" and both ctrl ".sliderP__ctrl--prev" and ".sliderP__ctrl--next". Gallery - sliders must contain ".sliderP__gallery"
 
-//partner slider v2--------------
-const partnerSlider = document.querySelector(".partners__circle");
+class SliderP {
+  constructor(mainBlock) {
+    this.sliderMain = mainBlock;
+    this.sliderCtrl = this.sliderMain.querySelector(".sliderP__ctrl");
+    this.next = this.sliderMain.querySelector(".sliderP__ctrl--next");
+    this.prev = this.sliderMain.querySelector(".sliderP__ctrl--prev");
+    this.galleryLength = this.sliderMain.querySelectorAll(".sliderP__gallery >*").length - 1;
 
-if (partnerSlider) {
-  const sliderPrev = partnerSlider.querySelector(".partners-ctrl-left");
-  const sliderNext = partnerSlider.querySelector(".partners-ctrl-right");
-  let slides = partnerSlider.querySelectorAll(".circle__flex a");
-  let slidesTotal = slides.length - 1;
+    this.slideMove = {
+      next: () => {
+        this.slideMoveNext(0);
+      },
+      prev: () => {
+        this.slideMovePrev(this.galleryLength);
+      }
+    };
+  }
 
-  partnerSlider.addEventListener("click", e => {
-    clearInterval(partnersSliderInterval);
-    if (e.target == sliderNext) {
-      slideMove("next");
-    }
-    if (e.target == sliderPrev) {
-      slideMove("prev");
-    }
-  });
+  init(interval) {
+    this.sliderCtrl.addEventListener("click", e => {
+      interval ? clearInterval(this.sliderInterval) : null;
 
-  function slideMove(direction) {
-    slides = partnerSlider.querySelectorAll(".circle__flex a");
-    if (direction == "next") {
-      slides[0].setAttribute("style", `margin-left: -185px`);
-      setTimeout(() => {
-        slides[0].parentNode.appendChild(slides[0]);
-        slides[0].removeAttribute("style");
-      }, 1001);
-    }
-    if (direction == "prev") {
-      slides[0].parentNode.prepend(slides[slidesTotal]);
-      slides[slidesTotal].setAttribute("style", `margin-left: -185px`);
-      setTimeout(() => {
-        slides[slidesTotal].removeAttribute("style");
-      }, 40);
+      if (e.target == this.next) {
+        this.slideMove.next();
+      }
+      if (e.target == this.prev) {
+        this.slideMove.prev();
+      }
+    });
+    if (interval) {
+      this.sliderInterval = setInterval(() => {
+        this.slideMove.next();
+      }, 2000);
     }
   }
 
-  const partnersSliderInterval = setInterval(() => {
-    slideMove("next");
-  }, 2000);
+  slideMoveNext(slideToMove) {
+    this.gallery = this.sliderMain.querySelectorAll(".sliderP__gallery >*");
+    this.gallery[slideToMove].setAttribute("style", `margin-left: -185px`);
+    setTimeout(() => {
+      this.gallery[slideToMove].parentNode.appendChild(this.gallery[slideToMove]);
+      this.gallery[slideToMove].removeAttribute("style");
+    }, 1001);
+  }
+  slideMovePrev(slideToMove) {
+    this.gallery = this.sliderMain.querySelectorAll(".sliderP__gallery >*");
+    this.gallery[slideToMove].setAttribute("style", `margin-left: -185px`);
+    this.gallery[0].parentNode.prepend(this.gallery[slideToMove]);
+    setTimeout(() => {
+      this.gallery[slideToMove].removeAttribute("style");
+    }, 40);
+  }
 }
-//partner slider v2 END----------
+//class of brands slider END
+const brandsSlider = document.querySelector("#brandsSlider");
+if (brandsSlider) {
+  let brandsS = new SliderP(brandsSlider);
+  brandsS.init(true);
+}
+
+class sliderC extends SliderP {
+  constructor(mainBlock) {
+    super(mainBlock);
+
+    this.slideMove = {
+      next: () => {
+        console.log("next New");
+        this.slideMoveNext(0);
+        this.slideMoveNext(1);
+      },
+      prev: () => {
+        console.log("Prev New");
+        this.slideMovePrev(this.galleryLength);
+        this.slideMovePrev(this.galleryLength - 1);
+      }
+    };
+  }
+}
+
+const catalogBrandsSlider = document.querySelector("#catalog-brands");
+if (catalogBrandsSlider) {
+  let catalogBrandsSliderNew = new sliderC(catalogBrandsSlider);
+
+  catalogBrandsSliderNew.init(true);
+}
 
 //---partners slider ---
 const partnersCtrl = document.querySelector(".partners__control1111");
@@ -516,9 +560,9 @@ if (prodTabs) {
       e.preventDefault();
       for (i = 0; i < prodTabs.children.length; i++) {
         if (prodTabs.children[i] == e.target.parentNode) {
-          prodTabs.nextElementSibling.children[i].classList.remove("hide");
+          prodTabs.parentNode.nextElementSibling.children[i].classList.remove("hide");
         } else {
-          prodTabs.nextElementSibling.children[i].classList.add("hide");
+          prodTabs.parentNode.nextElementSibling.children[i].classList.add("hide");
         }
 
         if (prodTabs.children[i].classList.contains("choose-tab")) {
