@@ -634,9 +634,7 @@ body {
   width: 102px;
 }
 
-.scroll-tabs {
-  overflow: scroll;
-}
+
 
 #catalog-brands .partners__control {
   width: 100%;
@@ -1523,9 +1521,35 @@ a:hover {
   }
 }
 
+.tabs-shadow {
+  display: none;
+}
+
 @media (max-width: 767px) and (min-width: 320px) {
   .header__element1 {
     display: none;
+  }
+
+  .tabs-shadow {
+    position: absolute;
+    width: 64px;
+    height: 32px;
+    display: block;
+    top: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(248, 247, 247, 0) 0%, rgba(248, 247, 247, 1) 50%, rgba(248, 247, 247, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(248, 247, 247, 0) 0%, rgba(248, 247, 247, 1) 50%, rgba(248, 247, 247, 1) 100%);
+    background: linear-gradient(to right, rgba(248, 247, 247, 0) 0%, rgba(248, 247, 247, 1) 50%, rgba(248, 247, 247, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f8f7f7', endColorstr='#f8f7f7', GradientType=1);
+  }
+
+  .choose__wtd__container {
+    position: relative;
+  }
+
+  .scroll-tabs {
+    overflow: scroll;
+    /* position: relative; */
   }
 
   .catalog .catalog__group .catalog__group__box a.product-link {
