@@ -605,7 +605,7 @@ body {
 }
 
 .catalog .catalog__group .catalog__group__box .box__naming a {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .catalog .catalog__group .catalog__group__box .box__naming {
@@ -1514,6 +1514,10 @@ a:hover {
   cursor: pointer;
 }
 
+.news__flex .news__box:hover p {
+  font-weight: 600;
+}
+
 @media (max-width: 1278px) and (min-width: 767px) {
   .catalog .catalog__group .catalog__group__box a.product-link {
     width: auto;
@@ -1638,6 +1642,19 @@ a:hover {
   .umbrella .socialbuttons .sociabuttons__download {
     margin-right: 5px;
   }
+
+  .umbrella .socialbuttons .sociabuttons__and {
+    width: 95px;
+    margin-right: 0px;
+  }
+
+  .choose .choose__pay ul {
+    width: 100%;
+  }
+
+  .choose .choose__wtd li:last-child {
+    margin-right: 50px;
+  }
 }
 
 .only-sm {
@@ -1671,10 +1688,7 @@ a:hover {
     top: -315px;
   }
 
-  .umbrella .socialbuttons .sociabuttons__and {
-    width: 95px;
-    margin-right: 0px;
-  }
+
 }
 
 @media (max-width: 1024px) {
