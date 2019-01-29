@@ -1114,8 +1114,9 @@ a:hover {
 .bread ul li a {
   transition: 1s ease;
 }
-.bread ul li a:hover {
-  /* color: #000; */
+.bread ul li a:hover,
+.header__element2:hover {
+  color: #fff;
   font-family: monbold;
 }
 
